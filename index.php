@@ -64,7 +64,7 @@
 
         echo("</table>");
         $conn = new mysqli("mysql-phanteon.alwaysdata.net","phanteon","hasło_testowe","phanteon_test_base");  
-    $result = $conn->query('SELECT * FROM pracownicy where zarobki>=20'); 
+    $result = $conn->query('SELECT * FROM pracownicy where zarobki>=40'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
