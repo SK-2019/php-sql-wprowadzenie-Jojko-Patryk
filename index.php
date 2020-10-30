@@ -1,6 +1,7 @@
 <?php
     $conn = new mysqli("mysql-phanteon.alwaysdata.net","phanteon","hasło_testowe","phanteon_test_base");  //Adres do którego się łączę, nazwa użytkownika, hasło, baza danych
     $result = $conn->query('SELECT * FROM pracownicy');
+    echo("Select * from pracownicy")
         echo("<table border=1>");
         echo("<th>Id</th>"); //Nazwy Kolumn
         echo("<th>Imie</th>");
@@ -16,6 +17,7 @@
         echo("</table>");
         $conn = new mysqli("mysql-phanteon.alwaysdata.net","phanteon","hasło_testowe","phanteon_test_base");  
     $result = $conn->query('SELECT * FROM pracownicy where imie like "%a"'); // wyświetla tylko kobiety
+            echo("select * from pracownicyt where imie like %a")
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
@@ -31,6 +33,7 @@
         echo("</table>");
         $conn = new mysqli("mysql-phanteon.alwaysdata.net","phanteon","hasło_testowe","phanteon_test_base");  
     $result = $conn->query('SELECT * FROM pracownicy where (dzial=1 or dzial=3)'); // wyświetla tylko pracowników z działu pierwszego i trzeciego
+            echo("select * from pracownicy where (dzial=1 or dzial=3)")
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
