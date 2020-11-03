@@ -27,7 +27,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Zadanie 2: SELECT * FROM pracownicy where imie like %a</h2>");  
+    echo("<h2>Zadanie 2: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie like %a</h2>");  
     $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie like "%a"'); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
@@ -43,7 +43,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Zadanie 3: SELECT * FROM pracownicy where (dzial=1 or dzial=3)</h2>");  
+    echo("<h2>Zadanie 3: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and (dzial=1 or dzial=3)</h2>");  
     $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and (dzial=1 or dzial=3)'); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
@@ -61,7 +61,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Zadanie 4: SELECT * FROM pracownicy where dzial=2</h2>");  
+    echo("<h2>Zadanie 4: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and dzial = 2</h2>");  
     $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and dzial = 2');
         echo("<table border=1>");
         echo("<th>Imie</th>");
@@ -79,7 +79,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Zadanie 5: SELECT * FROM pracownicy where zarobki>=40</h2>");  
+    echo("<h2>Zadanie 5: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and zarobki>=40</h2>");  
     $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and zarobki>=40'); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
