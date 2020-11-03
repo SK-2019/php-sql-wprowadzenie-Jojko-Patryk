@@ -1,6 +1,7 @@
 <?php
-    require("connect.php"); 
+    require("connect.php");
     $result = $conn->query('SELECT * FROM pracownicy');
+    echo("<h2>Zadanie 1</h2>")    
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
