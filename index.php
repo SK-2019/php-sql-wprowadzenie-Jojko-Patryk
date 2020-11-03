@@ -27,7 +27,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Zadanie 2: SELECT * FROM pracownicy where imie like ""%a""</h2>");  
+    echo("<h2>Zadanie 2: SELECT * FROM pracownicy where imie like %a</h2>");  
     $result = $conn->query('SELECT * FROM pracownicy where imie like "%a"'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
