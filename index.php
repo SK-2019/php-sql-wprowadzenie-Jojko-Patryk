@@ -12,7 +12,7 @@
 
     require("connect.php");
     echo("<h2>Zadanie 1: SELECT * FROM pracownicy</h2>");
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `z-pracownicy`, `z-organizacja` WHERE dzial = id_org');
+    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
