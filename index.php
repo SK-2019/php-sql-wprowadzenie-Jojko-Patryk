@@ -12,15 +12,17 @@
 
     require("connect.php");
     echo("<h2>Zadanie 1: SELECT * FROM pracownicy</h2>");
-    $result = $conn->query('SELECT * FROM pracownicy');
+    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `z-pracownicy`, `z-organizacja` WHERE dzial = id_org');
         echo("<table border=1>");
-        echo("<th>Id</th>"); 
+     
         echo("<th>Imie</th>");
-        echo("<th>Dzial</th>");
+        
         echo("<th>Zarobki</th>");
+       echo("<th>data_urodzenia</th>");
+    echo("<th>Nazwa dzial</th>");
             while($row=$result->fetch_assoc()){ 
                 echo("<tr>");
-                    echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td>"); 
+                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
                 echo("</tr>");
             }
