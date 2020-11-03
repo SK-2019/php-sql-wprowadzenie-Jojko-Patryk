@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -25,7 +26,8 @@
             }
 
         echo("</table>");
-        require("connect.php");  
+    require("connect.php");
+    echo("<h2>Zadanie 2</h2>");  
     $result = $conn->query('SELECT * FROM pracownicy where imie like "%a"'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
@@ -40,7 +42,8 @@
             }
 
         echo("</table>");
-        require("connect.php");  
+    require("connect.php");
+    echo("<h2>Zadanie 3</h2>");  
     $result = $conn->query('SELECT * FROM pracownicy where (dzial=1 or dzial=3)'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
@@ -57,7 +60,8 @@
         echo("</table>");
 
         echo("</table>");
-        require("connect.php");  
+    require("connect.php");
+    echo("<h2>Zadanie 4</h2>");  
     $result = $conn->query('SELECT * FROM pracownicy where dzial=2');
         echo("<table border=1>");
         echo("<th>Id</th>"); 
@@ -74,7 +78,8 @@
         echo("</table>");
 
         echo("</table>");
-        require("connect.php");  
+    require("connect.php");
+    echo("<h2>Zadanie 5</h2>");  
     $result = $conn->query('SELECT * FROM pracownicy where zarobki>=40'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
