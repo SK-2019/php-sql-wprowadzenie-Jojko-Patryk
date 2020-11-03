@@ -14,10 +14,10 @@
     echo("<h2>Zadanie 1: SELECT * FROM pracownicy</h2>");
     $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
         echo("<table border=1>");
-        echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
-        echo("<th>Dzial</th>");
         echo("<th>Zarobki</th>");
+        echo("<th>Data_Urodzenia</th>")
+        echo("<th>Nazwa_Działu</th>")
             while($row=$result->fetch_assoc()){ 
                 echo("<tr>");
                     echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td>"); 
