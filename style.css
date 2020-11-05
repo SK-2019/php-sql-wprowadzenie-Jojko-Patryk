@@ -4,11 +4,10 @@ body {
 h2{
     color: lime;
 }
-h3{
-    color: limegreen;
-    font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    
-}    
+
+nav{
+    color: red
+}
 
 table{
     color: orange;
