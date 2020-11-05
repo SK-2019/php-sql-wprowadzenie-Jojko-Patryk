@@ -10,7 +10,7 @@
 
 <?php
 
-    echo("<h3>https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk</h3>")
+    echo("<h3>https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk</h3>");
 
     require("connect.php");
     echo("<h2>Zadanie 1: SELECT count(imie) as ci imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org'</h2>");
