@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class=nav>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
-    <a href="tablica.php">tablica</a>
-</div>
+
 
 <?php
 
