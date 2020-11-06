@@ -7,100 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="nav">
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
-    <a href="tablica.php">tablica</a>
+<div class=nav>
+    <a href="pracownicy.php"><h2>Pracownicy</h2></a>
+    <a href="organizacja.php"><h2>Pracownicy i Organizacja</h2></a>
+    <a href="funkcje.php"><h2>Funkcje Agrygujące</h2></a>
+
+
+</div>
+
 <?php
 
-    require("connect.php");
-    echo("<h2>Zadanie 1: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org'</h2>");
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
-                echo("</tr>");
-            }
 
-        echo("</table>");
-    require("connect.php");
-    echo("<h2>Zadanie 2: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie like %a</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie like "%a"'); 
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>");  
 
-                echo("</tr>");
-            }
 
-        echo("</table>");
-    require("connect.php");
-    echo("<h2>Zadanie 3: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and (dzial=1 or dzial=3)</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and (dzial=1 or dzial=3)'); 
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
-                echo("</tr>");
-            }
 
-        echo("</table>");
 
-        echo("</table>");
-    require("connect.php");
-    echo("<h2>Zadanie 4: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and dzial = 2</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and dzial = 2');
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
-                echo("</tr>");
-            }
 
-        echo("</table>");
 
-        echo("</table>");
-    require("connect.php");
-    echo("<h2>Zadanie 5: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and zarobki>=40</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and zarobki>=40'); 
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
-                echo("</tr>");
-            }
 
-        echo("</table>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
     
 </body>
 </html>
-
-
-
-
