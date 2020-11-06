@@ -114,6 +114,20 @@ $result = $conn->query('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy
          }
          echo("</table>");
 
+require("connect.php");
+echo("<h2>Ile Kobiet pracuje łącnznie w działach 1 i 3</h2>");
+$result = $conn->query('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy WHERE (dzial=1 or dzial=3) and imie like "%a"');
+    echo("<table border=1>");
+    echo("<th>Liczba_Pracowników</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["liczba_pracownikow"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>");
+
 
 
 
