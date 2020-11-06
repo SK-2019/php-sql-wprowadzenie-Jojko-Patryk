@@ -8,9 +8,9 @@
 </head>
 <body>
 <div class=nav>
-    <a href="pracownicy.php"><h2>Pracownicy</h2></a>
-    <a href="organizacja.php"><h2>Pracownicy i Organizacja</h2></a>
-    <a href="funkcje.php"><h2>Funkcje Agrygujące</h2></a>
+    <a href="pracownicy.php">Pracownicy</a>
+    <a href="organizacja.php">Pracownicy i Organizacja</a>
+    <a href="funkcje.php">Funkcje Agrygujące</a>
 
 
 </div>

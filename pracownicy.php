@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+<div class=nav>
+    <a href="pracownicy.php">Pracownicy</a>
+    <a href="organizacja.php">Pracownicy i Organizacja</a>
+    <a href="funkcje.php">Funkcje Agrygujące</a>
+</div>
 <?php
 
     require("connect.php");
@@ -25,7 +30,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("Pracownicy tylko z działu 2");
+    echo("Pracownicy tylko z działu 2 i działu 3");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (dzial=2 or dzial=3)');
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -41,7 +46,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("Pracownicy tylko z działu 2");
+    echo("Pracownicy których zarobki są mniejsze niż 30");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (zarobki<30)');
             echo("<table border=1>");
             echo("<th>Imie</th>");
