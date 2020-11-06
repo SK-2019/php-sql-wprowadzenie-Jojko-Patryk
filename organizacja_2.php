@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<div>
+<div class=nav>
 
     <a href="pracownicy.php">Pracownicy</a>
     <a href="organizacja.php">Pracownicy i Organizacja</a>
@@ -27,9 +27,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
                 echo("<td>".$row["imie"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
             echo("</tr>");
-    echo("</table>");
+    
          }
-         
+         echo("</table>");      
 require("connect.php");
 echo("<h2>Kobiety posortowane rosnąco po imieniu</h2>");
 $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie like "%a" order by imie asc');
@@ -46,7 +46,7 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
     echo("</table>");
 require("connect.php");
 echo("<h2>Kobiety z działu 1 i 3 posortowane rosnąco po zarobkach</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND (dzial=1 or dzial=3) AND imie like "%a" order by zarobki asc');
+$result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND (dzial=1 or dzial=3) AND imie like "%a" order by zarobki asc');
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Zarobki</th>");
@@ -61,7 +61,7 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
     echo("</table>");
 require("connect.php");
 echo("<h2>Pracownicy z nazwą działów</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie not like "%a" order by dzial asc, zarobki asc ');
+$result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie not like "%a" order by dzial asc, zarobki asc ');
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -71,6 +71,7 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
 
             echo("</tr>");
          }
+         echo("</table>");     
 
 
             
