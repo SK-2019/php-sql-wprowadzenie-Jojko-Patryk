@@ -96,8 +96,8 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
 
             echo("</tr>");
     echo("</table>");
-    
          }
+         
 
     
     
