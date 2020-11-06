@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class=nav>
@@ -11,6 +12,7 @@
     <a href="pracownicy.php">Pracownicy</a>
     <a href="organizacja.php">Pracownicy i Organizacja</a>
     <a href="funkcje.php">Funkcje Agrygujące</a>
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
 
 </div>
 
@@ -64,7 +66,7 @@ echo("<h2>Pracownicy z nazwą działów</h2>");
 $result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie not like "%a" order by dzial asc, zarobki asc ');
     echo("<table border=1>");
     echo("<th>Imie</th>");
-    echo("<th>Zarobki</th>");
+    echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
          while($row=$result->fetch_assoc()){ 
             echo("<tr>");
