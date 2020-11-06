@@ -98,7 +98,21 @@ $result = $conn->query('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy WHERE
             echo("</tr>");
     
          }
-         echo("</table>")
+         echo("</table>");
+
+require("connect.php");
+echo("<h2>Ilu jest pracowników</h2>");
+$result = $conn->query('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy ');
+    echo("<table border=1>");
+    echo("<th>Liczba_Pracowników</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["liczba_pracownikow"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>");
 
 
 
