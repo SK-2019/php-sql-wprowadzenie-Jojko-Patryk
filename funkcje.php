@@ -43,6 +43,20 @@ $result = $conn->query('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy WHER
          }
          echo("</table>");
 
+require("connect.php");
+echo("<h2>Suma zarobów mężczyzn pracujących w działach 2 i 3</h2>");
+$result = $conn->query('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy WHERE (dzial=2 or dzial=3) AND imie not like "%a"');
+    echo("<table border=1>");
+    echo("<th>Suma_Zarobków</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["suma_zarobki"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>");
+
 
 
 
