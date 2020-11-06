@@ -86,7 +86,7 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
 
 require("connect.php");
 echo("<h2>Pracownicy z działu 3 posortowani rosnąco po imieniu</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org order by imie asc');
+$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org order AND (dzial=3) by imie asc');
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -96,7 +96,7 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
 
             echo("</tr>");
     echo("</table>");    
-
+         }
     
     
 
