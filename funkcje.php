@@ -86,6 +86,21 @@ $result = $conn->query('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy WHERE
          echo("</table>");
 
 
+require("connect.php");
+echo("<h2>Średnia zarobków mężczyzn z działów 1 i 2</h2>");
+$result = $conn->query('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy WHERE (dzial=1 or dzial=2) AND imie not like "%a"');
+    echo("<table border=1>");
+    echo("<th>AVG_Zarobków</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["avg_zarobki"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>")
+
+
 
 
 
