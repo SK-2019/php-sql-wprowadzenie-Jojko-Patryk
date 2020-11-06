@@ -43,6 +43,20 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
          }
     echo("</table>");
 
+    require("connect.php");
+echo("<h2>Lista kobiet z nazwami działów</h2>");
+$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie like "%a"');
+    echo("<table border=1>");
+    echo("<th>Imie</th>");
+    echo("<th>Nazwa_Działu</th>");
+        while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["imie"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
+
+            echo("</tr>");
+         }
+    echo("</table>");
+
 
     
     
