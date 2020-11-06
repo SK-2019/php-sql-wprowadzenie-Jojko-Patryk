@@ -64,6 +64,7 @@ echo("<h2>Pracownicy z nazwą działów</h2>");
 $result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie not like "%a" order by dzial asc, zarobki asc ');
     echo("<table border=1>");
     echo("<th>Imie</th>");
+    echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
          while($row=$result->fetch_assoc()){ 
             echo("<tr>");
