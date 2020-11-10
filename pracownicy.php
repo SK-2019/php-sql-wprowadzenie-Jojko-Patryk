@@ -16,7 +16,7 @@
 <?php
 
     require("connect.php");
-    echo("Pracownicy tylko z działu 2");
+    echo("<h2>Pracownicy tylko z działu 2</h2>");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -32,7 +32,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("Pracownicy tylko z działu 2 i działu 3");
+    echo("<h2>Pracownicy tylko z działu 2 i działu 3</h2>");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (dzial=2 or dzial=3)');
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -48,7 +48,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("Pracownicy których zarobki są mniejsze niż 30");
+    echo("<h2>Pracownicy których zarobki są mniejsze niż 30</h2>");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (zarobki<30)');
             echo("<table border=1>");
             echo("<th>Imie</th>");
