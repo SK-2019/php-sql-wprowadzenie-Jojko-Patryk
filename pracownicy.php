@@ -11,12 +11,15 @@
     <a href="pracownicy.php">Pracownicy</a>
     <a href="organizacja.php">Pracownicy i Organizacja</a>
     <a href="funkcje.php">Funkcje Agrygujące</a>
+    <a href="dataczas.php">Data i Czas</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
+
+
 </div>
 <?php
 
     require("connect.php");
-    echo("<h2>Pracownicy tylko z działu 2</h2>");
+    echo("Pracownicy tylko z działu 2");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -32,7 +35,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Pracownicy tylko z działu 2 i działu 3</h2>");
+    echo("Pracownicy tylko z działu 2 i działu 3");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (dzial=2 or dzial=3)');
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -48,7 +51,7 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>Pracownicy których zarobki są mniejsze niż 30</h2>");
+    echo("Pracownicy których zarobki są mniejsze niż 30");
         $result = $conn->query('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (zarobki<30)');
             echo("<table border=1>");
             echo("<th>Imie</th>");
