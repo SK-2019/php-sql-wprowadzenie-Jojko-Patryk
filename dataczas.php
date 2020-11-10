@@ -25,7 +25,7 @@ echo("<h2>Wiek poszczególnych pracowników</h2>");
 
 require("connect.php");
 echo("<h2>Wiek poszczególnych pracowników z działu serwis</h2>");
-    $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy WHERE dzial=1');
+    $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM "pracownicy", "organizacja" WHERE dzial=1 AND dzial = id_org');
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
