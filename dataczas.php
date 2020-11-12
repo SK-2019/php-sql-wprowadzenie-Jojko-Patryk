@@ -63,7 +63,7 @@ echo("<h2>Suma lat wszystkich pracowników</h2>");
             
 require("connect.php");
 echo("<h2>Suma lat pracowników z działu handel</h2>");
-    $result = $conn->query('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_ha FROM pracownicy, organizacja WHERE id_org=dzial AND dzial=3');
+    $result = $conn->query('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_ha FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3');
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
         echo("<th>Dział</th>");
