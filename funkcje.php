@@ -109,7 +109,7 @@ $result = $conn->query($sql);
          echo("</table>");
 
 require("connect.php");
-$sql = ('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy ')
+$sql = ('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy ');
 echo("<h2>".$sql."</h2>");
 $result = $conn->query($sql);
     echo("<table border=1>");
