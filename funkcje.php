@@ -65,8 +65,8 @@ $result = $conn->query($sql);
 
 require("connect.php");
 $sql = ('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy where imie not like "%a"');
-echo("<h2>średnia zarobków wszystkich mężczyzn</h2>");
-$result = $conn->query('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy where imie not like "%a"');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>AVG_Zarobków</th>");
          while($row=$result->fetch_assoc()){ 

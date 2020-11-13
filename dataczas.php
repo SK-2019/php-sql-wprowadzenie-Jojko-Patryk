@@ -109,7 +109,7 @@ echo("<h2>".$sql."</h2>");
 
 require("connect.php");
 $sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia) AS avg_age, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
-echo("<h2>".$sql"</h2>");
+echo("<h2>".$sql."</h2>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Średni Wiek</th>");
