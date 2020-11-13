@@ -123,6 +123,21 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
+require("connect.php");
+$sql = ('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy WHERE (dzial=1 or dzial=3) and imie like "%a"');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>Liczba_Pracowników</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["liczba_pracownikow"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>");
+
 
 
 
