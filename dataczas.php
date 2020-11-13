@@ -20,8 +20,9 @@
 <?php
 
 require("connect.php");
-echo("<h2>Wiek poszczególnych pracowników</h2>");
-    $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy');
+$sql = ('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy');
+echo("<h2>".$sql."</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Wiek</th>");
@@ -34,8 +35,9 @@ echo("<h2>Wiek poszczególnych pracowników</h2>");
             echo("</table>");
 
 require("connect.php");
-echo("<h2>Wiek poszczególnych pracowników z działu serwis</h2>");
-    $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=1');
+$sql = ('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=1');
+echo("<h2>".$sql."</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
@@ -49,8 +51,9 @@ echo("<h2>Wiek poszczególnych pracowników z działu serwis</h2>");
             echo("</table>");
 
 require("connect.php");
-echo("<h2>Suma lat wszystkich pracowników</h2>");
-    $result = $conn->query('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma_lat FROM pracownicy');
+$sql = ('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma_lat FROM pracownicy');
+echo("<h2>".$sql."</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
             while($row=$result->fetch_assoc()){
@@ -62,8 +65,9 @@ echo("<h2>Suma lat wszystkich pracowników</h2>");
             echo("</table>");
             
 require("connect.php");
-echo("<h2>Suma lat pracowników z działu handel</h2>");
-    $result = $conn->query('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_ha FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3');
+$sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_ha FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3');
+echo("<h2>".$sql."</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
         echo("<th>Dział</th>");
@@ -76,8 +80,9 @@ echo("<h2>Suma lat pracowników z działu handel</h2>");
             echo("</table>");
             
 require("connect.php");
-echo("<h2>Suma lat kobiet</h2>");
-    $result = $conn->query('SELECT  SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_f FROM pracownicy WHERE imie like "%a"');
+$sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_f FROM pracownicy WHERE imie like "%a"');
+echo("<h2>".$sql."</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
             while($row=$result->fetch_assoc()){
@@ -89,8 +94,9 @@ echo("<h2>Suma lat kobiet</h2>");
             echo("</table>");
 
 require("connect.php");
-echo("<h2>Suma lat mężczyzn</h2>");
-    $result = $conn->query('SELECT  SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_m FROM pracownicy WHERE imie not like "%a"');
+$sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_m FROM pracownicy WHERE imie not like "%a"');
+echo("<h2>".$sql."</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
             while($row=$result->fetch_assoc()){
@@ -102,8 +108,9 @@ echo("<h2>Suma lat mężczyzn</h2>");
             echo("</table>");
 
 require("connect.php");
-echo("<h2>Średnia lat pracowników w poszczególnych działach</h2>");
-    $result = $conn->query('SELECT  AVG(YEAR(curdate())-YEAR(data_urodzenia) AS avg_age, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
+$sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia) AS avg_age, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
+echo("<h2>".$sql"</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Średni Wiek</th>");
         echo("<th>dział</th>");

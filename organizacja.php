@@ -19,8 +19,9 @@
 <?php
  
 require("connect.php");
-echo("<h2>Pracownicy z nazwą działów</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -32,8 +33,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
          }
     echo("</table>");
 require("connect.php");
-echo("<h2>Pracownicy tylko z działu 1 i 4</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND (dzial=1 or dzial=4)');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND (dzial=1 or dzial=4)');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -46,8 +48,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
     echo("</table>");
 
 require("connect.php");
-echo("<h2>Lista kobiet z nazwami działów</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie like "%a"');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie like "%a"');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -60,8 +63,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
     echo("</table>");
     
 require("connect.php");
-echo("<h2>Lista mężczyzn z nazwami działów</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie not like "%a"');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie not like "%a"');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -74,8 +78,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
     echo("</table>");
 
 require("connect.php");
-echo("<h2>Pracownicy posortowani malejąco</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org order by imie desc');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org order by imie desc');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -88,8 +93,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
     echo("</table>");
 
 require("connect.php");
-echo("<h2>Pracownicy z działu 3 posortowani rosnąco po imieniu</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3 order by imie asc');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3 order by imie asc');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -102,8 +108,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
          }
          echo("</table>");      
 require("connect.php");
-echo("<h2>Kobiety posortowane rosnąco po imieniu</h2>");
-$result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie like "%a" order by imie asc');
+$sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND imie like "%a" order by imie asc');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Nazwa_Działu</th>");
@@ -116,8 +123,9 @@ $result = $conn->query('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja
         
     echo("</table>");
 require("connect.php");
-echo("<h2>Kobiety z działu 1 i 3 posortowane rosnąco po zarobkach</h2>");
-$result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND (dzial=1 or dzial=3) AND imie like "%a" order by zarobki asc');
+$sql = ('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND (dzial=1 or dzial=3) AND imie like "%a" order by zarobki asc');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Zarobki</th>");
@@ -131,8 +139,9 @@ $result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `or
 
     echo("</table>");
 require("connect.php");
-echo("<h2>Pracownicy z nazwą działów</h2>");
-$result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie not like "%a" order by dzial asc, zarobki asc ');
+$sql = ('SELECT imie, zarobki, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org and imie not like "%a" order by dzial asc, zarobki asc ');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
     echo("<th>Imie</th>");
