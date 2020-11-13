@@ -178,8 +178,8 @@ echo("<h3>".$sql."</h3>");
             echo("</table>");
 
 require("connect.php");
-$sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sx, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial AND (dzial=1 i dzial=2)");
-echo("<h2>Najstarsi pracownicy w dziale handel i serwis</h2>");
+$sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sp, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial AND (dzial=1 or dzial=2)");
+echo("<h2>Najmłodsi pracownicy w dziale handel i serwis</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
@@ -187,23 +187,7 @@ echo("<h3>".$sql."</h3>");
         echo("<th>Dział</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["sx"]."</td><td>".$row["nazwa_dzial"]."</td>");
-                echo("<tr>");
-                
-            }
-            echo("</table>");
-
-require("connect.php");
-$sql = ("SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) AS dz from pracownicy");
-echo("<h2>Długość życia pracowników w dniach</h2>");
-echo("<h3>".$sql."</h3>");
-    $result = $conn->query($sql);
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Dni Życia</th>");
-            while($row=$result->fetch_assoc()){
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["dz"]."</td>");
+                    echo("<td>".$row["sp"]."</td><td>".$row["nazwa_dzial"]."</td>");
                 echo("<tr>");
                 
             }
