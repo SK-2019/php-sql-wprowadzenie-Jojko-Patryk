@@ -129,6 +129,122 @@ echo("<h3>".$sql."</h3>");
             }
         echo("</table>");
 
+require("connect.php");
+$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sa, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial");
+echo("<h2>Suma lat w poszczególnych działach</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Suma Lat</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["sa"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT MAX(year(curdate())-year(data_urodzenia)) as sk, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial");
+echo("<h2>Najstarsi pracownicy w każdym dziale</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Max Lat</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["sk"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sx, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial");
+echo("<h2>Najstarsi pracownicy w każdym dziale</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Min Lat</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["sx"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sx, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial AND (dzial=1 i dzial=2)");
+echo("<h2>Najstarsi pracownicy w dziale handel i serwis</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Min Lat</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["sx"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) AS dz from pracownicy");
+echo("<h2>Długość życia pracowników w dniach</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Imie</th>");
+        echo("<th>Dni Życia</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["dz"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) AS dz from pracownicy");
+echo("<h2>Długość życia pracowników w dniach</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Imie</th>");
+        echo("<th>Dni Życia</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["dz"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT * FROM pracownicy WHERE imie not like '%a' ORDER BY data_urodzenia ASC LIMIT 1");
+echo("<h2>Najstarszy mężczyzna</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Imie</th>");
+        echo("<th>Data Urodzenia</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+
+
+
+
 
 
 
