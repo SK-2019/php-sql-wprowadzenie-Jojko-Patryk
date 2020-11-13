@@ -1,19 +1,19 @@
 body {
-    background-color: gray;
+    background-color: white;
     }
 h2{
-    color: orange;
+    color: black;
 }
 
 nav{
-    color: orange
+    color: black
 }
 
 table{
-    color: orange;
+    color: black;
 }
 
 th{
-    background-color: skyblue;
-    color: black     ; 
+    background-color:#4CAF50;
+    color: white     ; 
 }
