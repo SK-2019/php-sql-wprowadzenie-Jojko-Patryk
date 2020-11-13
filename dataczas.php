@@ -68,6 +68,22 @@ echo("<h3>".$sql."</h3>");
             echo("</table>");
 
 require("connect.php");
+$sql = ("SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS sh FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3");
+echo("<h2>Suma lat pracowników z działu handel</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Suma Lat</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["sh"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");            
+
+require("connect.php");
 $sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl from pracownicy where imie like '%a'");
 echo("<h2>Suma lat kobiet</h2>");
 echo("<h3>".$sql."</h3>");
@@ -83,7 +99,7 @@ echo("<h3>".$sql."</h3>");
             echo("</table>");
 
 require("connect.php");
-$sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_m FROM pracownicy WHERE imie not like "%a"');
+$sql = ("SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS sm FROM pracownicy WHERE imie not like '%a'");
 echo("<h2>Suma lat mężczyzn</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
@@ -91,14 +107,14 @@ echo("<h3>".$sql."</h3>");
         echo("<th>Suma Lat</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["suma_m"]."</td>");
+                    echo("<td>".$row["sm"]."</td>");
                 echo("<tr>");
                 
             }
             echo("</table>");
 
 require("connect.php");
-$sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia) AS avg_age, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
+$sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia) AS ava, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
 echo("<h2>Średnia lat pracowników w poszczególnych działach</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
@@ -107,7 +123,7 @@ echo("<h3>".$sql."</h3>");
         echo("<th>dział</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["avg_age"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                    echo("<td>".$row["ava"]."</td><td>".$row["nazwa_dzial"]."</td>");
                 echo("<tr>");
                 
             }
