@@ -66,11 +66,9 @@ echo("<h3>".$sql."</h3>");
                 
             }
             echo("</table>");
-            
 
-            
 require("connect.php");
-$sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_f FROM pracownicy WHERE imie like "%a"');
+$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl from pracownicy where imie like '%a'");
 echo("<h2>Suma lat kobiet</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
@@ -78,7 +76,7 @@ echo("<h3>".$sql."</h3>");
         echo("<th>Suma Lat</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["suma_f"]."</td>");
+                    echo("<td>".$row["sl"]."</td>");
                 echo("<tr>");
                 
             }
@@ -113,7 +111,7 @@ echo("<h3>".$sql."</h3>");
                 echo("<tr>");
                 
             }
-            echo("</table>");
+        echo("</table>");
 
 
 
