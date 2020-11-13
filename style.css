@@ -3,21 +3,26 @@ body {
     }
 h2{
     color: black;
+    font: arial;
 }
 
 nav{
-    color: black
+    color: black;
+    font: arial;
 }
 
 table{
     color: black;
+    font: arial;
 }
 
 th{
     background-color:#4CAF50;
-    color: white     ; 
+    color: white     ;
+    font: arial; 
 }
 
 td{
     text-align: center;
+    font: arial;
 }
