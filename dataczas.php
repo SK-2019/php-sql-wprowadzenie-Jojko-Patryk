@@ -66,10 +66,25 @@ echo("<h3>".$sql."</h3>");
                 
             }
             echo("</table>");
+require("connect.php");
+$sql = ("SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia)) as sh FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3");
+echo("<h2>Suma lat pracowników z działu handel</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Suma Lat</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["sh"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<tr>");
+                            
+                }
+                echo("</table>");
 
 
 require("connect.php");
-$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl from pracownicy where imie like '%a'");
+$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl FROM pracownicy WHERE imie like '%a'");
 echo("<h2>Suma lat kobiet</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
@@ -84,7 +99,7 @@ echo("<h3>".$sql."</h3>");
             echo("</table>");
 
 require("connect.php");
-$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia) as sl from pracownicy where imie not like '%a'");
+$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sm FROM pracownicy WHERE imie not like '%a'");
 echo("<h2>Suma lat mężczyzn</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
@@ -92,14 +107,14 @@ echo("<h3>".$sql."</h3>");
         echo("<th>Suma Lat</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["sl"]."</td>");
+                    echo("<td>".$row["sm"]."</td>");
                 echo("<tr>");
                 
             }
             echo("</table>");
 
 require("connect.php");
-$sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia) AS ava, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
+$sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia)) as ava, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
 echo("<h2>Średnia lat pracowników w poszczególnych działach</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
