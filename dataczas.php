@@ -178,7 +178,7 @@ echo("<h3>".$sql."</h3>");
             echo("</table>");
 
 require("connect.php");
-$sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sp, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial AND (dzial=1 or dzial=2)");
+$sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sp, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial AND (dzial=1 or dzial=2) GROUP BY dzial");
 echo("<h2>Najmłodsi pracownicy w dziale handel i serwis</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
@@ -225,7 +225,23 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
+echo("<h1>FORMATOWANIE DAT (nieukończone)</h1>");            
 
+require("connect.php");
+$sql = ("SELECT *, DATE_FORMAT(data_urodzenia,'%W-%M-%Y') FROM pracownicy");
+echo("<h2></h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Imie</th>");
+        echo("<th>Data Urodzenia</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
 
 
 

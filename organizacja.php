@@ -156,7 +156,7 @@ echo("<h3>".$sql."</h3>");
 $result = $conn->query($sql);
     echo("<table border=1>");
     echo("<th>Imie</th>");
-    echo("<th>Imie</th>");
+    echo("<th>Zarobki</th>");
     echo("<th>Nazwa_Działu</th>");
          while($row=$result->fetch_assoc()){ 
             echo("<tr>");
@@ -165,6 +165,60 @@ $result = $conn->query($sql);
             echo("</tr>");
          }
          echo("</table>");
+
+echo("<h1> LIMIT <h1>");
+
+require("connect.php");
+$sql = ("SELECT * FROM pracownicy, organizacja WHERE dzial=id_org and dzial=4 ORDER BY zarobki asc LIMIT 2");
+echo("<h2>Najlepiej zarabiający z działu 4</h2>");
+echo("<h3>".$sql."</h3>");
+$result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>Imie</th>");
+    echo("<th>Zarobki</th>");
+    echo("<th>Nazwa_Działu</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
+
+            echo("</tr>");
+         }
+         echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT * FROM pracownicy, organizacja WHERE dzial=id_org and (dzial=4 or dzial=2) and imie like '%a' ORDER BY zarobki asc LIMIT 3");
+echo("<h2>Najlepiej zarabiający z działu 4</h2>");
+echo("<h3>".$sql."</h3>");
+$result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>Imie</th>");
+    echo("<th>Zarobki</th>");
+    echo("<th>Nazwa_Działu</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
+
+            echo("</tr>");
+         }
+         echo("</table>");
+
+require("connect.php");
+$sql = ("SELECT * FROM pracownicy ORDER BY data_urodzenia ASC LIMIT 1");
+echo("<h2>Najstarszy mężczyzna</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>Imie</th>");
+        echo("<th>Data Urodzenia</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
+                echo("<tr>");
+                
+            }
+            echo("</table>");
+
+
 
 
 
