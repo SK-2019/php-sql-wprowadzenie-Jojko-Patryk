@@ -33,6 +33,36 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
+require("connect.php");
+$sql = ('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy WHERE imie like "%a"');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>Suma_Zarobków</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["suma_zarobki"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>");
+
+require("connect.php");
+$sql = ('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy WHERE (dzial=2 or dzial=3) AND imie not like "%a"');
+echo("<h2>".$sql."</h2>");
+$result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>Suma_Zarobków</th>");
+         while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["suma_zarobki"]."</td>"); 
+
+            echo("</tr>");
+    
+         }
+         echo("</table>");
+
 
 
 
