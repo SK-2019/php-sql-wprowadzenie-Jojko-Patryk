@@ -67,7 +67,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 require("connect.php");
-$sql = ("SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia)) as sh FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3");
+$sql = ("SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia)) as sh, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3");
 echo("<h2>Suma lat pracowników z działu handel</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
