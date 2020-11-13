@@ -1,5 +1,8 @@
 body {
     background-color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     }
 h2{
     color: black;
