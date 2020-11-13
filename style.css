@@ -12,3 +12,8 @@ nav{
 table{
     color: orange;
 }
+
+th{
+    background-color: skyblue;
+    color: black     ; 
+}
