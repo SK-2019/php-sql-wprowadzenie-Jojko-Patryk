@@ -67,21 +67,6 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
-$sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl, nazwa_dzial FROM 'pracownicy', 'organizacja' WHERE dzial=id_org AND nazwa_dzial='handel'";);
-echo("<h2>Suma lat pracowników z działu handel</h2>");
-echo("<h3>".$sql."</h3>");
-    $result = $conn->query($sql);
-        echo("<table border=1>");
-        echo("<th>Suma Lat</th>");
-        echo("<th>Dział</th>");
-            while($row=$result->fetch_assoc()){
-                echo("<tr>");
-                    echo("<td>".$row["sl"]."</td><td>".$row["nazwa_dzial"]."</td>");
-                echo("<tr>");
-                
-            }
-            echo("</table>");            
 
 require("connect.php");
 $sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl from pracownicy where imie like '%a'");
