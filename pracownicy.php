@@ -20,7 +20,8 @@
 
     require("connect.php");
     $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
-    echo("<h2>".$sql."</h2>");
+    echo("<h2>Pracownicy tylko z działu 2");
+    echo("<h3>".$sql."</h3>");
         $result = $conn->query($sql);
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -37,7 +38,8 @@
         echo("</table>");
     require("connect.php");
     $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (dzial=2 or dzial=3)');
-    echo("<h2>".$sql."</h2>");
+    echo("<h2>Pracownicy z działu 2 i 3</h2>");
+    echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
             echo("<table border=1>");
             echo("<th>Imie</th>");
@@ -54,6 +56,7 @@
         echo("</table>");
     require("connect.php");
     $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (zarobki<30)');
+    echo("<h2>Pracownicy z zarobkami mniejszymi niż 30</h2>");
     echo("<h2>".$sql."</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");

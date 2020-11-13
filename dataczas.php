@@ -21,7 +21,8 @@
 
 require("connect.php");
 $sql = ('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Wiek poszczególnych pracowników (w latach)</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
@@ -36,7 +37,8 @@ echo("<h2>".$sql."</h2>");
 
 require("connect.php");
 $sql = ('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=1');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Wiek poszczególnych pracowników (w latach) z działu serwis</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
@@ -52,7 +54,8 @@ echo("<h2>".$sql."</h2>");
 
 require("connect.php");
 $sql = ('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma_lat FROM pracownicy');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Suma lat wszystkich pracowników</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
@@ -66,7 +69,8 @@ echo("<h2>".$sql."</h2>");
             
 require("connect.php");
 $sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_ha FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=3');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Suma lat pracowników z działu handel</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
@@ -81,7 +85,8 @@ echo("<h2>".$sql."</h2>");
             
 require("connect.php");
 $sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_f FROM pracownicy WHERE imie like "%a"');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Suma lat kobiet</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
@@ -95,7 +100,8 @@ echo("<h2>".$sql."</h2>");
 
 require("connect.php");
 $sql = ('SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia) AS suma_m FROM pracownicy WHERE imie not like "%a"');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Suma lat mężczyzn</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma Lat</th>");
@@ -109,7 +115,8 @@ echo("<h2>".$sql."</h2>");
 
 require("connect.php");
 $sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia) AS avg_age, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
-echo("<h2>".$sql."</h2>");
+echo("<h2>Średnia lat pracowników w poszczególnych działach</h2>");
+echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Średni Wiek</th>");
