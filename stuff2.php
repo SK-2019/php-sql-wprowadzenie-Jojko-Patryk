@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=], initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
 <?php
 
-echo(<"<li>"$_POST["Fname"]"<li>");
-echo("<li>"$_POST["Lname"]"<li>");
-echo("<li>"$_POST["Phone"]"<li>");
-echo("<li>"$_POST["City"]"<li>");
+echo(<$_POST["Fname"]);
+echo($_POST["Lname"]);
+echo($_POST["Phone"]);
+echo($_POST["City"]);
 
 ?>
     
