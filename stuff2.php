@@ -10,7 +10,7 @@
 
 <?php
 
-echo(<$_POST["Fname"]);
+echo($_POST["Fname"]);
 echo($_POST["Lname"]);
 echo($_POST["Phone"]);
 echo($_POST["City"]);
