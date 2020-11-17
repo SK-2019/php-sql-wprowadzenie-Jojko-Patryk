@@ -10,10 +10,10 @@
 
 <?php
 
-echo("<li><h2> Imie:".$_POST["Fname"]."</li></h2>");
-echo("<li> Nazwisko:".$_POST["Lname"]."</li>");
-echo("<li> Nr.Tel:".$_POST["Phone"]."</li>");
-echo("<li> Miasto:".$_POST["City"]."</li>");
+echo("<h2> Imie:".$_POST["Fname"]."<</h2>");
+echo("<h2> Nazwisko:".$_POST["Lname"]."</h2>");
+echo("<h2> Nr.Tel:".$_POST["Phone"]."</h2>");
+echo("<h2> Miasto:".$_POST["City"]."</h2>");
 
 ?>
     
