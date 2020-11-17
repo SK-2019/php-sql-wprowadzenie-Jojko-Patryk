@@ -9,10 +9,10 @@
 
 <?php
 
-echo($_POST["Fname"]);
-echo($_POST["Lname"]);
-echo($_POST["Phone"]);
-echo($_POST["City"]);
+echo(<"<li>"$_POST["Fname"]"<li>");
+echo("<li>"$_POST["Lname"]"<li>");
+echo("<li>"$_POST["Phone"]"<li>");
+echo("<li>"$_POST["City"]"<li>");
 
 ?>
     
