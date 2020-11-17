@@ -8,7 +8,10 @@
 <body>
     
     <form action="stuff2.php" method="post">
-        <input type="text" name="name">
+        <input type="text" name="Fname"></br>
+        <input type="text" name="Lname"></br>
+        <input type="text" name="Phone"></br>
+        <input type="text" name="City"></br>
         <input type="submit" value="wyślij">
     </form>    
 
