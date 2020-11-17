@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <form action="stuff.php" method="post">
+    <form action="stuff2.php" method="post">
         <input type="text" name="name">
         <input type="submit" value="wyślij">
     </form>    
