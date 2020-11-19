@@ -12,7 +12,7 @@
         <input type="text" name="Fname" placeholder="Imię"></br>
         <input type="text" name="Lname" placeholder="Nazwisko"></br>
         <input type="text" name="Phone" placeholder="Nr.Tel"></br>
-        <input type="text" name="City" placeholeder="Miasto"></br>
+        <input type="text" name="City" placeholder="Miasto"></br>
         <input type="text" name="Postcode" placeholder="Kod Pocztowy"></br>
         <input type="submit" value="wyślij">
     </form>    
