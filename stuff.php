@@ -13,6 +13,7 @@
         <input type="text" name="Lname"></br>
         <input type="text" name="Phone"></br>
         <input type="text" name="City"></br>
+        <input type="text" name="Postcode"></br>
         <input type="submit" value="wyślij">
     </form>    
 
