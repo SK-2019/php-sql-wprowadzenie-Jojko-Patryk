@@ -9,11 +9,11 @@
 <body>
     
     <form action="stuff2.php" method="post">
-        <input type="text" name="Fname"></br>
-        <input type="text" name="Lname"></br>
-        <input type="text" name="Phone"></br>
-        <input type="text" name="City"></br>
-        <input type="text" name="Postcode"></br>
+        <input type="text" name="Fname" placeholder="Imię"></br>
+        <input type="text" name="Lname" placeholder="Nazwisko"></br>
+        <input type="text" name="Phone" placeholder="Nr.Tel"></br>
+        <input type="text" name="City" placeholeder="Miasto"></br>
+        <input type="text" name="Postcode" placeholder="Kod Pocztowy"></br>
         <input type="submit" value="wyślij">
     </form>    
 
