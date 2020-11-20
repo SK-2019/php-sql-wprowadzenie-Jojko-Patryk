@@ -18,17 +18,22 @@ echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
 require("connect.php");
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
-       VALUES (null,'Ksawery', 3, 36,'1995-10-21')";
-
-//zapisanie do bazy danych
-$conn->query($sql);
-
-$conn->close();
-?>
+    die("Connection failed: " . $conn->connect_error);
+  }
+  
+  $sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
+         VALUES (null,'Balbina', 4, 86,'1999-05-21')";
+  
+  //obsługa błędów zapisu do bazy
+  if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+  //informacja o ewentualnych błędach
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+  
+  $conn->close();
+  ?>
 
 </body>
 </html>
