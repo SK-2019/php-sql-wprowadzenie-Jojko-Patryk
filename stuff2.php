@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=], initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
-    <title>Document</title>
+    <title>Życie To Żenada</title>
 </head>
 <body>
 
