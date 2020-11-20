@@ -22,22 +22,6 @@ echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 require("connect.php");
 $sql = sprintf("INSERT INTO pracownicy('imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES(%s,%s,%s,%s)", $_POST['imie'], $_POST['dzial'], $_POST['zarobki'], $_POST['data_urodzenia']);
 
-require("connect.php");
-    $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
-    echo("<h2>Pracownicy tylko z działu 2");
-    echo("<h3>".$sql."</h3>");
-        $result = $conn->query($sql);
-            echo("<table border=1>");
-            echo("<th>Imie</th>");
-            echo("<th>Zarobki</th>");
-            echo("<th>Data_Urodzenia</th>");
-            echo("<th>Dział</th>");
-        while($row=$result->fetch_assoc()){ 
-            echo("<tr>");
-                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
-
-            echo("</tr>");
-
 
 
 ?>
