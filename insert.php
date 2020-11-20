@@ -21,8 +21,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
   
-  $sql = "INSERT INTO Pracownik (null,imie, dzial, zarobki) 
-         VALUES (null,".$_POST['name'].", 1, 76,'1991-11-21')";
+  $sql = "INSERT INTO Pracownik (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
+         VALUES (null,".$_POST['imie'].", 1, 76,'1991-11-21')";
   
   echo "<li>".$sql;
   
