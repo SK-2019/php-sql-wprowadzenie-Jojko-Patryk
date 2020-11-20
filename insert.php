@@ -19,9 +19,9 @@ if ($conn->connect_error) {
 }
 
 //definiujemy zapytanie $sql
-$sql = "INSERT INTO pracownicy (null, imie, dzial,zarobki,data_urodzenia)
+$sql = "INSERT INTO pracownicy (null, imie, dzial,zarobki,data_urodzenia)"
 	      VALUES (
-					null,". 
+					null,
 					$_POST['imie'], 
 					$_POST['dzial'], 
 					$_POST['zarobki'],
