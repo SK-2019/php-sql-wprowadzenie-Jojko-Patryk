@@ -28,10 +28,18 @@ $sql="INSERT INTO 'pracownicy'('id', 'imie', 'dzial', 'zarobki', 'data_urodzenia
         $_POST['imie'],
         $_POST['dzial'],
         $_POST['zarobki'],
-        $_POST['data_urodzenia'],
+        $_POST['data_urodzenia']
         ";
 
 $conn->query($sql);
+echo "<h2>".$sql;
+if ($conn->query($sql) === TRUE) {
+    echo "New Record Created Successfully"
+    } else {
+    echo "Error: ".$sql."<br>".$conn->error;    
+    }
+
+$conn->close();
 
 ?>
     
