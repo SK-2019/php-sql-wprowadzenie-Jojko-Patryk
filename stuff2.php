@@ -15,15 +15,25 @@
 <?php
 
 include("connect.php");
-echo("<h2> Imie:".$_POST["Fname"]."</h2>");
-echo("<h2> Nazwisko:".$_POST["Lname"]."</h2>");
-echo("<h2> Nr.Tel:".$_POST["Phone"]."</h2>");
-echo("<h2> Miasto:".$_POST["City"]."</h2>");
-echo("<h2> Kod Pocztowy:".$_POST["Postcode"]."</h2>");
+echo("<h2> Imie:".$_POST["imie"]."</h2>");
+echo("<h2> Dział:".$_POST["dzial"]."</h2>");
+echo("<h2> Zarobki:".$_POST["zarobki"]."</h2>");
+echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
-$sql="INSERT INTO 'pracownicy'('id', 'imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES (null,'józef',2,23,'2001-10-23')";
+
+
+require("connect.php");
+$sql="INSERT INTO 'pracownicy'('id', 'imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES(
+        null,
+        $_POST['imie'],
+        $_POST['dzial'],
+        $_POST['zarobki'],
+        $_POST['data_urodzenia'],
+        ");
+
 $conn->query($sql);
-
+$sql2='SELECT * FROM pracownicy'
+echo($sql2)
 ?>
     
 </body>
