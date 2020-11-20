@@ -13,7 +13,7 @@
         <input type="number" name="dzial" placeholder="Dział"></br>
         <input type="number" name="zarobki" placeholder="Zarobki"></br>
         <input type="date" name="data_urodzenia" placeholder="data_urodzenia"></br>
-        <input type="submit" value="dodaj_pracownika">
+        <input type="submit" value="Dodaj Pracownika">
     </form>    
 
 </body>
