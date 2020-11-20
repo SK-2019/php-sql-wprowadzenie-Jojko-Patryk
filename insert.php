@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,6 +17,7 @@ echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
 require("connect.php");
 $sql = sprintf("INSERT INTO pracownicy('imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES(%s,%s,%s,%s)", $_POST['imie'], $_POST['dzial'], $_POST['zarobki'], $_POST['data_urodzenia']);
+echo("<li>".$sql."</li>");
 ?>
 </body>
 </html>
