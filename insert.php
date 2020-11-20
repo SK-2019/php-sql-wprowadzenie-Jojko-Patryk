@@ -15,21 +15,20 @@ echo("<h2> Dział:".$_POST["dzial"]."</h2>");
 echo("<h2> Zarobki:".$_POST["zarobki"]."</h2>");
 echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
+
 require("connect.php");
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-$sql = sprintf("INSERT INTO pracownicy('imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES(%s,%s,%s,%s)", $_POST['imie'], $_POST['dzial'], $_POST['zarobki'], $_POST['data_urodzenia']);
+  die("Connection failed: " . $conn->connect_error);
+}
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-  } else {
-  
-    echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-  
-  $conn->close();
+$sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
+       VALUES (null,'Ksawery', 3, 36,'1995-10-21')";
 
+//zapisanie do bazy danych
+$conn->query($sql);
+
+$conn->close();
 ?>
+
 </body>
 </html>
