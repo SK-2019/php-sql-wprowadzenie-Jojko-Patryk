@@ -29,11 +29,10 @@ $sql="INSERT INTO 'pracownicy'('id', 'imie', 'dzial', 'zarobki', 'data_urodzenia
         $_POST['dzial'],
         $_POST['zarobki'],
         $_POST['data_urodzenia'],
-        ");
+        ";
 
 $conn->query($sql);
-$sql2='SELECT * FROM pracownicy'
-echo($sql2)
+
 ?>
     
 </body>
