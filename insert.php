@@ -21,7 +21,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
   
-  $sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
+  $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki) 
          VALUES (null,'Balbina', 4, 86,'1999-05-21')";
   
   //obsługa błędów zapisu do bazy
