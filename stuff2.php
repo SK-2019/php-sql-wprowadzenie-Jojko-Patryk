@@ -22,10 +22,10 @@ echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 require("connect.php");
 $sql = sprintf("INSERT INTO pracownicy('imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES(%s,%s,%s,%s)", $_POST['imie'], $_POST['dzial'], $_POST['zarobki'], $_POST['data_urodzenia']);
 
-$sql2 = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
-    echo("<h2>Pracownicy tylko z działu 2");
-    echo("<h3>".$sql2."</h3>");
-        $result = $conn->query($sql2);
+$box = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy');
+    echo("<h2>Pracownicy</h2>");
+    echo("<h3>".$box."</h3>");
+        $result = $conn->query($box);
             echo("<table border=1>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
