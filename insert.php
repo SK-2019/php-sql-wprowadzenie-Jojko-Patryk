@@ -22,7 +22,9 @@ if ($conn->connect_error) {
   }
   
   $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
-         VALUES (null,'Balbina', 4, 86,'1999-05-21')";
+         VALUES (null,'.$_POST['imie'], 4, 86,'1999-05-21')";
+
+echo "<h2>".$sql."</h2>";
   
   //obsługa błędów zapisu do bazy
   if ($conn->query($sql) === TRUE) {
