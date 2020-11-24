@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
 
-$sql = "DELETE FROM pracownicy WHERE id=$_POST['ID']";
+  $sql = "DELETE FROM pracownicy where id_pracownicy='".$_POST['id']."'";
 
 echo "<h2>".$sql."</h2>";
 
