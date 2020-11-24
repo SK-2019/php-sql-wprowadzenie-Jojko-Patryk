@@ -27,6 +27,7 @@ echo("<h2>Wiek poszczególnych pracowników (w latach)</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Wiek</th>");
             while($row=$result->fetch_assoc()){
@@ -43,6 +44,7 @@ echo("<h2>Wiek poszczególnych pracowników (w latach) z działu serwis</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
         echo("<th>Wiek<th>");
@@ -200,6 +202,7 @@ echo("<h2>Długość życia pracowników w dniach</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Dni Życia</th>");
             while($row=$result->fetch_assoc()){
@@ -216,6 +219,7 @@ echo("<h2>Najstarszy mężczyzna</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
             while($row=$result->fetch_assoc()){
@@ -234,6 +238,7 @@ echo("<h2></h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
             while($row=$result->fetch_assoc()){

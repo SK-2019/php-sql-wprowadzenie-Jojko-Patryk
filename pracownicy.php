@@ -26,6 +26,7 @@
     echo("<h3>".$sql."</h3>");
         $result = $conn->query($sql);
             echo("<table border=1>");
+            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
@@ -44,6 +45,7 @@
     echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
             echo("<table border=1>");
+            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
@@ -62,6 +64,7 @@
     echo("<h2>".$sql."</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
+            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
