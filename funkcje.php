@@ -36,7 +36,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy WHERE imie like "%a"');
 echo("<h2>Suma zarobków wszystkich kobiet</h2>");
 echo("<h3>".$sql."</h3>");
@@ -52,7 +52,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy WHERE (dzial=2 or dzial=3) AND imie not like "%a"');
 echo("<h2>Suma zarobków mężczyzn pracujących w dziale 2 i 3</h2>");
 echo("<h3>".$sql."</h3>");
@@ -68,7 +68,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy where imie not like "%a"');
 echo("<h2>Średnia zarobków wszystkich mężczyzn</h2>");
 echo("<h3>".$sql."</h3>");
@@ -84,7 +84,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+);
 $sql = ('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy WHERE (dzial=4)');
 echo("<h2>Średnia zarobków pracowników z działu 4</h2>");
 echo("<h3>".$sql."</h3>");
@@ -100,7 +100,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy WHERE (dzial=1 or dzial=2) AND imie not like "%a"');
 echo("<h2>Średnia zarobków mężczyzn z działu 1 i 2</h2>");
 echo("<h3>".$sql."</h3>");
@@ -116,7 +116,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy ');
 echo("<h2>Ilu jest wszystkich pracowników</h2>");
 echo("<h3>".$sql."</h3>");
@@ -132,7 +132,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT COUNT(imie) as liczba_pracownikow FROM pracownicy WHERE (dzial=1 or dzial=3) and imie like "%a"');
 echo("<h2>Ile kobiet pracuje łącznie w działach 1 i 3</h2>");
 echo("<h3>".$sql."</h3>");

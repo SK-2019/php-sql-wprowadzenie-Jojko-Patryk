@@ -37,7 +37,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=1');
 echo("<h2>Wiek poszczególnych pracowników (w latach) z działu serwis</h2>");
 echo("<h3>".$sql."</h3>");
@@ -54,7 +54,6 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
 $sql = ('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma_lat FROM pracownicy');
 echo("<h2>Suma lat wszystkich pracowników</h2>");
 echo("<h3>".$sql."</h3>");
@@ -68,7 +67,7 @@ echo("<h3>".$sql."</h3>");
                 
             }
             echo("</table>");
-require("connect.php");
+
 $sql = ("SELECT SUM(YEAR(curdate())-YEAR(data_urodzenia)) as sh, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org AND dzial=2");
 echo("<h2>Suma lat pracowników z działu handel</h2>");
 echo("<h3>".$sql."</h3>");
@@ -85,7 +84,7 @@ echo("<h3>".$sql."</h3>");
                 echo("</table>");
 
 
-require("connect.php");
+
 $sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sl FROM pracownicy WHERE imie like '%a'");
 echo("<h2>Suma lat kobiet</h2>");
 echo("<h3>".$sql."</h3>");
@@ -100,7 +99,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sm FROM pracownicy WHERE imie not like '%a'");
 echo("<h2>Suma lat mężczyzn</h2>");
 echo("<h3>".$sql."</h3>");
@@ -115,7 +114,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ('SELECT AVG(YEAR(curdate())-YEAR(data_urodzenia)) as ava, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial');
 echo("<h2>Średnia lat pracowników w poszczególnych działach</h2>");
 echo("<h3>".$sql."</h3>");
@@ -131,7 +130,7 @@ echo("<h3>".$sql."</h3>");
             }
         echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT SUM(year(curdate())-year(data_urodzenia)) as sa, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial group by dzial");
 echo("<h2>Suma lat w poszczególnych działach</h2>");
 echo("<h3>".$sql."</h3>");
@@ -147,7 +146,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT MAX(year(curdate())-year(data_urodzenia)) as sk, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial");
 echo("<h2>Najstarsi pracownicy w każdym dziale</h2>");
 echo("<h3>".$sql."</h3>");
@@ -163,7 +162,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sx, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial");
 echo("<h2>Najstarsi pracownicy w każdym dziale</h2>");
 echo("<h3>".$sql."</h3>");
@@ -179,7 +178,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT MIN(year(curdate())-year(data_urodzenia)) as sp, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial AND (dzial=1 or dzial=2) GROUP BY dzial");
 echo("<h2>Najmłodsi pracownicy w dziale handel i serwis</h2>");
 echo("<h3>".$sql."</h3>");
@@ -195,7 +194,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) AS dz from pracownicy");
 echo("<h2>Długość życia pracowników w dniach</h2>");
 echo("<h3>".$sql."</h3>");
@@ -211,7 +210,7 @@ echo("<h3>".$sql."</h3>");
             }
             echo("</table>");
 
-require("connect.php");
+
 $sql = ("SELECT * FROM pracownicy WHERE imie not like '%a' ORDER BY data_urodzenia ASC LIMIT 1");
 echo("<h2>Najstarszy mężczyzna</h2>");
 echo("<h3>".$sql."</h3>");
@@ -229,7 +228,7 @@ echo("<h3>".$sql."</h3>");
 
 echo("<h1>FORMATOWANIE DAT (nieukończone)</h1>");            
 
-require("connect.php");
+
 $sql = ("SELECT *, DATE_FORMAT(data_urodzenia,'%W-%M-%Y') FROM pracownicy");
 echo("<h2></h2>");
 echo("<h3>".$sql."</h3>");
