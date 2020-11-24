@@ -21,31 +21,29 @@
 <?php
 
     require("connect.php");
-    $sql = ('SELECT * FROM pracownicy WHERE dzial=2');
+    $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
     echo("<h2>Pracownicy tylko z działu 2");
     echo("<h3>".$sql."</h3>");
         $result = $conn->query($sql);
             echo("<table border=1>");
-            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
             echo("<th>Dział</th>");
         while($row=$result->fetch_assoc()){ 
             echo("<tr>");
-                echo("<td>".$row["id"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
+                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
 
             echo("</tr>");
         }
 
         echo("</table>");
     
-    $sql = ('SELECT * FROM pracownicy WHERE (dzial=2 or dzial=3)');
+    $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (dzial=2 or dzial=3)');
     echo("<h2>Pracownicy z działu 2 i 3</h2>");
     echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
             echo("<table border=1>");
-            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
@@ -59,12 +57,11 @@
 
         echo("</table>");
     
-    $sql = ('SELECT * FROM pracownicy WHERE (zarobki<30)');
+    $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE (zarobki<30)');
     echo("<h2>Pracownicy z zarobkami mniejszymi niż 30</h2>");
     echo("<h2>".$sql."</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
-            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");

@@ -27,12 +27,11 @@ echo("<h2>Wiek poszczególnych pracowników (w latach)</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
-        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Wiek</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["id"]."</td><td>".$row["imie"]."</td><td>".$row["wiek"]."</td>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["wiek"]."</td>");
                 echo("<tr>");
                 
             }
@@ -44,13 +43,12 @@ echo("<h2>Wiek poszczególnych pracowników (w latach) z działu serwis</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
-        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
         echo("<th>Wiek<th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["id"]."</td><td>".$row["imie"]."</td><td>".$row["wiek"]."</td><td>".$row["nazwa_dzial"]);
+                    echo("<td>".$row["imie"]."</td><td>".$row["wiek"]."</td><td>".$row["nazwa_dzial"]);
                 echo("<tr>");
                 
             }
@@ -197,17 +195,16 @@ echo("<h3>".$sql."</h3>");
             echo("</table>");
 
 
-$sql = ("SELECT *, DATEDIFF(CURDATE(),data_urodzenia) AS dz from pracownicy");
+$sql = ("SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) AS dz from pracownicy");
 echo("<h2>Długość życia pracowników w dniach</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
-        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Dni Życia</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["id"]."</td><td>".$row["imie"]."</td><td>".$row["dz"]."</td>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["dz"]."</td>");
                 echo("<tr>");
                 
             }
@@ -219,12 +216,11 @@ echo("<h2>Najstarszy mężczyzna</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
-        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["id"]."</td><td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
                 echo("<tr>");
                 
             }
@@ -238,12 +234,11 @@ echo("<h2></h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
-        echo("<th>ID</th>");
         echo("<th>Imie</th>");
         echo("<th>Data Urodzenia</th>");
             while($row=$result->fetch_assoc()){
                 echo("<tr>");
-                    echo("<td>".$row["id"]."</td><td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
                 echo("<tr>");
                 
             }
