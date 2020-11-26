@@ -39,7 +39,7 @@
 <?php
 
 require("connect.php");
-    $sql = ('SELECT * FROM "pracownicy", "organizacja" WHERE dzial = id_org');
+    $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy</h2>");
     echo("<h3>".$sql."</h3>");
         $result = $conn->query($sql);
@@ -48,10 +48,9 @@ require("connect.php");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
             echo("<th>Dział</th>");
-            echo("<th>Nazwa_Działu</th>");
-        while($row=$result->fetch_assoc()){ 
+            while($row=$result->fetch_assoc()){ 
             echo("<tr>");
-                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
 
             echo("</tr>");
         }
