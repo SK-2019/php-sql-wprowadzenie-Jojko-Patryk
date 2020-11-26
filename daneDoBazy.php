@@ -44,13 +44,14 @@ require("connect.php");
     echo("<h3>".$sql."</h3>");
         $result = $conn->query($sql);
             echo("<table border=1>");
+            echo("<th>ID</th>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
             echo("<th>Dział</th>");
             while($row=$result->fetch_assoc()){ 
             echo("<tr>");
-                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
+                echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
 
             echo("</tr>");
         }
