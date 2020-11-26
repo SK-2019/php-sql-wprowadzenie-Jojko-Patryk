@@ -86,7 +86,7 @@ $result = $conn->query($sql);
          }
          echo("</table>");
 
-);
+
 $sql = ('SELECT AVG(zarobki) as avg_zarobki FROM pracownicy WHERE (dzial=4)');
 echo("<h2>Średnia zarobków pracowników z działu 4</h2>");
 echo("<h3>".$sql."</h3>");
