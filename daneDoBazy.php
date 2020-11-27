@@ -58,7 +58,7 @@ require("connect.php");
                 <td>
 
                     <form action='delete.php' method='POST'>
-                        <input type='number name='id' value='".$row['id_pracownicy']."' hidden>
+                        <input type='hidden' name='id' value='".$row['id_pracownicy']."'>
                         <input type='submit' value='Usuń'>
                     </form>
 
