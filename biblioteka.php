@@ -29,7 +29,7 @@ echo("<h3>".$sql."</h3>");
 
 require("connect2.php");
 $sql = ('SELECT * FROM bibliotekaTytuł');
-echo("<h2>Autorzy</h2>");
+echo("<h2>Tytuły</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
@@ -46,8 +46,8 @@ echo("<h3>".$sql."</h3>");
     echo("</table>");
 
 require("connect2.php");
-$sql = ('SELECT * FROM "bibliotekaAT", "bibliotekaAutor", "bibliotekaTytuł" WHERE bibliotekaAutor_ID = Autor');
-echo("<h2>Autorzy</h2>");
+$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE Autor = bibliotekaAutor_ID AND Tytuł = bibliotekaTytuł_ID');
+echo("<h2>Dane w Bibliotece</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
