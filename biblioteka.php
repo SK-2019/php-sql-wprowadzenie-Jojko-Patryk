@@ -37,7 +37,7 @@ echo("<h3>".$sql."</h3>");
         echo("<th>Tytuł</th>");
     while($row=$result->fetch_assoc()){
         echo("<tr>");
-            echo("<td>".$row["id"]."</td><td>".$row["Tytuł"]."</td>");
+            echo("<td>".$row["id_tytuł"]."</td><td>".$row["Tytuł"]."</td>");
         echo("</tr>");
     
 
