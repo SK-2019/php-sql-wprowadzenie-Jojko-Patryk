@@ -46,7 +46,7 @@ echo("<h3>".$sql."</h3>");
     echo("</table>");
 
 require("connect2.php");
-$sql = ('SELECT * FROM "bibliotekaAT", "bibliotekaAutor", "bibliotekaTytuł" WHERE (bibliotekaAutor_ID = Autor) AND (bibliotekaTytuł_ID = Tytuł) ');
+$sql = ('SELECT * FROM "bibliotekaAT", "bibliotekaAutor", "bibliotekaTytuł" WHERE bibliotekaAutor_ID = Autor');
 echo("<h2>Autorzy</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
