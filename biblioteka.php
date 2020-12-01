@@ -34,7 +34,7 @@ echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>id</th>");
-        echo("<th>Autor</th>");
+        echo("<th>Tytuł</th>");
     while($row=$result->fetch_assoc()){
         echo("<tr>");
             echo("<td>".$row["id"]."</td><td>".$row["Tytuł"]."</td>");
@@ -53,6 +53,7 @@ echo("<h3>".$sql."</h3>");
         echo("<table border=1>");
         echo("<th>id</th>");
         echo("<th>Autor</th>");
+        echo("<th>Tytuł</th>");
     while($row=$result->fetch_assoc()){
         echo("<tr>");
             echo("<td>".$row["id"]."</td><td>".$row["Autor"]."</td><td>".$row["Tytuł"]);
