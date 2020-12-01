@@ -27,6 +27,42 @@ echo("<h3>".$sql."</h3>");
 
     echo("</table>");
 
+require("connect2.php");
+$sql = ('SELECT * FROM bibliotekaTytuł');
+echo("<h2>Autorzy</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>id</th>");
+        echo("<th>Autor</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+            echo("<td>".$row["id"]."</td><td>".$row["Tytuł"]."</td>");
+        echo("</tr>");
+    
+
+    }
+
+    echo("</table>");
+
+require("connect2.php");
+$sql = ('SELECT * FROM "bibliotekaAT", "bibliotekaAutor", "bibliotekaTytuł" WHERE (bibliotekaAutor_ID = Autor) AND (bibliotekaTytuł_ID = Tytuł) ');
+echo("<h2>Autorzy</h2>");
+echo("<h3>".$sql."</h3>");
+    $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>id</th>");
+        echo("<th>Autor</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+            echo("<td>".$row["id"]."</td><td>".$row["Autor"]."</td><td>".$row["Tytuł"]);
+        echo("</tr>");
+    
+
+    }
+
+    echo("</table>");
+
 
 ?>
     
