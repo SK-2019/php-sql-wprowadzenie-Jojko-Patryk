@@ -16,11 +16,11 @@
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
     <a href="formularz.html">Zakładka testowa</a>
     <a href="daneDoBazy.php">Dane Do Bazy</a>
+    <a href="biblioteka.php">Książki</a>
     
 
 
 </div>
-
     <form action="insert.php" method="post">
         <input type="text" name="imie" placeholder="Imię"></br>
         <input type="number" name="dzial" placeholder="Dział"></br>
