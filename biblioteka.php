@@ -27,36 +27,26 @@ $sql = ('SELECT * FROM bibliotekaAutor');
 echo("<h2>Autorzy</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>Autor</th>");
+        echo("<select name='Autor' id='id_autor'>");    
     while($row=$result->fetch_assoc()){
-        echo("<tr>");
-            echo("<td>".$row["id_autor"]."</td><td>".$row["Autor"]."</td>");
-        echo("</tr>");
-    
-
+        echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
     }
 
-    echo("</table>");
+        echo("<option value='Submit' value='Wybierz Autora'><br>");
+        echo("</select>");
 
 require("connect2.php");
 $sql = ('SELECT * FROM bibliotekaTytuł');
 echo("<h2>Tytuły</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>Tytuł</th>");
+        echo("<select name='Tytuł' id='id_tytuł'>"); 
     while($row=$result->fetch_assoc()){
-        echo("<tr>");
-            echo("<td>".$row["id_tytuł"]."</td><td>".$row["Tytuł"]."</td>");
-        echo("</tr>");
-    
-
+        echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
     }
 
-    echo("</table>");
+        echo("<option value='Submit' value='Wybierz Autora'><br>");
+        echo("</select>");
 
 require("connect2.php");
 $sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = bibliotekaAutor_ID AND id_tytuł = bibliotekaTytul_ID');
