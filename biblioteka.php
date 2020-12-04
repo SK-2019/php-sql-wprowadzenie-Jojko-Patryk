@@ -44,7 +44,7 @@ echo("<h3>".$sql2."</h3>");
 
 
 
-    $result = $conn->query($sql);
+    $result = $conn->query($sql2);
         echo("<select name='Tytuł' id='id_tytuł'>"); 
     while($row=$result->fetch_assoc()){
         echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
