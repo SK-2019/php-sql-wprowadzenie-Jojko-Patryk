@@ -24,22 +24,26 @@
 <?php
 
 require("connect2.php");
-$sql = ('SELECT * FROM bibliotekaAutor');
+$sql1 = ('SELECT * FROM bibliotekaAutor');
 echo("<h2>Autorzy</h2>");
-echo("<h3>".$sql."</h3>");
-    $result = $conn->query($sql);
-        echo("<select name='Autor' id='id_autor'>"); 
+echo("<h3>".$sql1."</h3>");
+
+$sql2 = ('SELECT * FROM bibliotekaTytuł');
+echo("<h2>Tytuły</h2>");
+echo("<h3>".$sql2."</h3>");  
+    
+    $result = $conn->query($sql1);
+    echo("<form action='wypozyczenia.php'>");   
+    echo("<select name='Autor' id='id_autor'>"); 
     while($row=$result->fetch_assoc()){
         echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
     }
 
         echo("</select>");
-        echo("<input type='Submit' value='Wybierz autora'><br>");
+  
 
-require("connect2.php");
-$sql = ('SELECT * FROM bibliotekaTytuł');
-echo("<h2>Tytuły</h2>");
-echo("<h3>".$sql."</h3>");
+
+
     $result = $conn->query($sql);
         echo("<select name='Tytuł' id='id_tytuł'>"); 
     while($row=$result->fetch_assoc()){
@@ -47,8 +51,8 @@ echo("<h3>".$sql."</h3>");
     }
 
         echo("</select>");
-        echo("<input type='Submit' value='Wybierz tytuł'><br>");
-
+        echo("<input type='Submit' value='SEND'><br>");
+echo("</form >");
 require("connect2.php");
 $sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = bibliotekaAutor_ID AND id_tytuł = bibliotekaTytul_ID');
 echo("<h2>Dane w Bibliotece</h2>");
