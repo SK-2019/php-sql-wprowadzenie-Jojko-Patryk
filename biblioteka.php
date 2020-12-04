@@ -87,7 +87,7 @@ $sql = ('SELECT * FROM bibliotekaTytuł');
         echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
     }
         echo("</select>");
-        echo("<input type='Submit' value='Wybierz tytuł'><br>");
+        echo("<input type='Submit' value='Wypożycz'><br>");
         
 
     
