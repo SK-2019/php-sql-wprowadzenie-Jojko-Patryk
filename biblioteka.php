@@ -16,6 +16,7 @@
     <a href="formularz.html">Zakładka testowa</a>
     <a href="daneDoBazy.php">Dane Do Bazy</a>
     <a href="biblioteka.php">Książki</a>
+    <a href="wypożycz.php">Wypożyczalnia</a>
     
 
 
@@ -32,8 +33,8 @@ echo("<h3>".$sql."</h3>");
         echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
     }
 
-        echo("<input type='Submit' value='Wybierz autora'><br>");
         echo("</select>");
+        echo("<input type='Submit' value='Wybierz autora'><br>");
 
 require("connect2.php");
 $sql = ('SELECT * FROM bibliotekaTytuł');
@@ -45,8 +46,8 @@ echo("<h3>".$sql."</h3>");
         echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
     }
 
-        echo("<input type='Submit' value='Wybierz tytuł'><br>");
         echo("</select>");
+        echo("<input type='Submit' value='Wybierz tytuł'><br>");
 
 require("connect2.php");
 $sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = bibliotekaAutor_ID AND id_tytuł = bibliotekaTytul_ID');
@@ -68,7 +69,33 @@ echo("<h3>".$sql."</h3>");
     echo("</table>");
 
 
-?>
+    echo("<h2>Wypożyczanie Książek</h2>");
+
+    require("connect2.php");
+$sql = ('SELECT * FROM bibliotekaAutor');
+    $result = $conn->query($sql);
+        echo("<select name='Autor' id='id_autor'>"); 
+    while($row=$result->fetch_assoc()){
+        echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
+    }
+
+require("connect2.php");
+$sql = ('SELECT * FROM bibliotekaTytuł');
+    $result = $conn->query($sql);
+        echo("<select name='Tytuł' id='id_tytuł'>"); 
+    while($row=$result->fetch_assoc()){
+        echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
+    }
+        echo("</select>");
+        echo("<input type='Submit' value='Wybierz tytuł'><br>");
+        
+
     
+
+    
+
+
+?>
+
 </body>
 </html>
