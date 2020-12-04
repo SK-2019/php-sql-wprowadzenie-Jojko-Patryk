@@ -78,7 +78,7 @@ $sql = ('SELECT * FROM bibliotekaAutor');
     while($row=$result->fetch_assoc()){
         echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
     }
-
+        echo("</select>");
 require("connect2.php");
 $sql = ('SELECT * FROM bibliotekaTytuł');
     $result = $conn->query($sql);
