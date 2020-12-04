@@ -27,12 +27,12 @@ $sql = ('SELECT * FROM bibliotekaAutor');
 echo("<h2>Autorzy</h2>");
 echo("<h3>".$sql."</h3>");
     $result = $conn->query($sql);
-        echo("<select name='Autor' id='id_autor'>");    
+        echo("<select name='Autor' id='id_autor'>"); 
     while($row=$result->fetch_assoc()){
         echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
     }
 
-        echo("<option value='Submit' value='Wybierz Autora'><br>");
+        echo("<input type='Submit' value='Wybierz autora'><br>");
         echo("</select>");
 
 require("connect2.php");
@@ -45,7 +45,7 @@ echo("<h3>".$sql."</h3>");
         echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
     }
 
-        echo("<option value='Submit' value='Wybierz Autora'><br>");
+        echo("<input type='Submit' value='Wybierz tytuł'><br>");
         echo("</select>");
 
 require("connect2.php");
