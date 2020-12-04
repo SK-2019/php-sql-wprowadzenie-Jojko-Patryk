@@ -24,22 +24,6 @@
 <?php
 
 
-require("connect2.php");
-$sql = ("SELECT * FROM `bibliotekaAutor`, `bibliotekaTytuł`");
-echo("<h2>Wypożyczenie</h2>");
-echo("<h3>".$sql."</h3>");
-    $result = $conn->query($sql);
-        echo("<select name='Autor' id='id_autor'>");
-        echo("<select name='Tytuł' id='id_tytuł'>"); 
-    while($row=$result->fetch_assoc()){
-        echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
-        echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
-    }
-        echo("<form action='Wypożyczono.php' method='post'>");
-        echo("<input type='Submit' value='Wybierz autora'><br>");
-        echo("<input type='Submit' value='Wybierz tytuł'><br>");
-        echo("</select>");
-
 
 
 ?>

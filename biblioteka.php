@@ -74,7 +74,7 @@ echo("<h3>".$sql."</h3>");
     require("connect2.php");
 $sql = ('SELECT * FROM bibliotekaAutor');
     $result = $conn->query($sql);
-        echo("<select name='Autor' id='id_autor'>"); 
+        echo("<select name='Autor' id='id_autor' action=`wypożycz.php` method='POST'>"); 
     while($row=$result->fetch_assoc()){
         echo("<option value=".$row['id_autor'].">".$row["Autor"]."</option>");
     }
@@ -82,7 +82,7 @@ $sql = ('SELECT * FROM bibliotekaAutor');
 require("connect2.php");
 $sql = ('SELECT * FROM bibliotekaTytuł');
     $result = $conn->query($sql);
-        echo("<select name='Tytuł' id='id_tytuł'>"); 
+        echo("<select name='Tytuł' id='id_tytuł' action=`wypożycz.php` method='POST'>"); 
     while($row=$result->fetch_assoc()){
         echo("<option value=".$row['id_tytuł'].">".$row["Tytuł"]."</option>");
     }
