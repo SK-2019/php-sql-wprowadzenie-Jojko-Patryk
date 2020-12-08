@@ -25,14 +25,14 @@
 
 require("connect2.php");
 
-$sql1 = ("SELECT * FROM bibliotekaAutor"); //Autorzy
-$sql2 = ("SELECT * FROM bibliotekaTytuł"); //Książki
+$sql1 = ("SELECT * FROM bibliotekaAutor"); 
+$sql2 = ("SELECT * FROM bibliotekaTytuł"); 
 echo("<h2>Wypożyczanie</h2>");
 echo("<h3>".$sql1."</h4>");
 echo("<h3>".$sql2."</h4>");
 $result=$conn->query($sql1);
 echo("<form action='wypozyczalnia.php' method='POST'>");
-echo("<label for='Autor'><h4 class='renting_form'>Wybierz autora:</h4></label>");
+echo("<label for='Autor'><h4>Wybierz autora:</h4></label>");
 echo("<select name='Autor' id='id_autor'>");
 while($row=$result->fetch_assoc()) 
 {
@@ -40,7 +40,7 @@ while($row=$result->fetch_assoc())
 }
 echo("</select>");
 $result=$conn->query($sql2);
-echo("<label for='Tytuł'><h4 class='renting_form'>Wybierz tytuł:</h4></label>");
+echo("<label for='Tytuł'><h4>Wybierz tytuł:</h4></label>");
 echo("<select name='Tytuł' id='id_tytuł'>");
 while($row=$result->fetch_assoc())
 {
