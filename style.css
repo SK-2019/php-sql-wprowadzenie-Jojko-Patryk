@@ -28,7 +28,8 @@
   
   .colorBlue {
     background-color: gainsboro;
-    width: 12%;
+    width: auto;
+    max-width: 18%;
     height: fit-content;
     overflow: hidden;
     display: flex;
