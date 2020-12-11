@@ -3,44 +3,45 @@
     align-items:center
   }
   
-.container {
+  .container {
     background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
    
   }
   
-.item {
+  .item {
     width: 200px;
     height: 100px;
     margin: 10px;
   
-}
+  }
   
-.colorRed {
-    background-color: darkgray;
+  .colorRed {
+    background-color: red;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-}
+  }
   
-.colorBlue {
-    background-color: whitesmoke;
+  .colorBlue {
+    background-color: aqua;
     width: 20%;
     height: fit-content;
     overflow: hidden;
     display: flex;
     align-items: column;
-    flex-direction: column;
+    flex-direction: column
     
   
   
-}
+  }
   
-.colorGreen {
-    background-color: lightgray;
+  .colorGreen {
+    background-color: lime;
     width: 76%;
-    
-}
-
+  
+  }
+  
+  
