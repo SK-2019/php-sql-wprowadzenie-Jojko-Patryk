@@ -41,7 +41,7 @@
   .colorGreen {
     background-color: lime;
     width: 76%;
-    height: fit-content;
+    height: auto;
     overflow: hidden;
     
     align-items: column;
