@@ -46,9 +46,15 @@
     padding-right: 10%;
     overflow: hidden;
     display:flex;
-    align-items: column;
+    
     
   
   }
+
+  th {
+    display: flex;
+    align-items: column;
+  }
+
   
   
