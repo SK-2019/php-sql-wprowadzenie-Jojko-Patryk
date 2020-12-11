@@ -23,7 +23,32 @@
           <a href="daneDoBazy.php">Dane Do Bazy</a>
           <a href="biblioteka.php">Książki</a>
       </div>
-      <div class="item colorGreen">tresc strony</div>
+      <div class="item colorGreen">
+
+<?php
+
+require("connect.php");
+    $sql = ('SELECT * FROM pracownicy');
+    echo("<h2>Pracownicy");
+    echo("<h3>".$sql."</h3>");
+        $result = $conn->query($sql);
+            echo("<table border=1>");
+            echo("<th>Imie</th>");
+            echo("<th>Zarobki</th>");
+            echo("<th>Data_Urodzenia</th>");
+            echo("<th>Dział</th>");
+        while($row=$result->fetch_assoc()){ 
+            echo("<tr>");
+                echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
+
+            echo("</tr>");
+        }
+
+        echo("</table>");
+
+
+
+?>
     </div>
   </body>
 </html>
