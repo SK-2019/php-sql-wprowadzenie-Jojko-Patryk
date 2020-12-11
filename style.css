@@ -44,3 +44,54 @@ font{
     font: bold;
     font-display: Arial;
 } 
+
+.title {
+    color: blue;
+    align-items:center
+  }
+  
+  .container {
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  
+  .item {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+  
+  }
+  
+  .colorDG {
+    background-color: darkgray;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .colorWS {
+    background-color: whitesmoke;
+    width: 20%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: column;
+    flex-direction: column
+    
+  
+  
+  }
+  
+  .colorLG {
+    background-color: lightgray;
+    width: 76%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: column;
+    flex-direction: column
+  
+  }
