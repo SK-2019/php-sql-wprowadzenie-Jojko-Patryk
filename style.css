@@ -42,7 +42,8 @@
   
   .colorGreen {
     background-color: gray;
-    width: 80%;
+    width: auto;
+    max-width: 70%;
     height: auto;
     overflow: hidden;
     
