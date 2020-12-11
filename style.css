@@ -41,12 +41,7 @@
 .colorThree {
     background-color: lightgray;
     width: 76%;
-    height: fit-content;
-    overflow: hidden;
-    display: flex;
-    align-items: column;
-    flex-direction: column;
-  
+    
 }
 
 
