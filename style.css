@@ -40,7 +40,7 @@
   
   .colorGreen {
     background-color: lime;
-    width: fit-content;
+    width: auto;
     height: fit-content;
     overflow: hidden;
     display: flex;
