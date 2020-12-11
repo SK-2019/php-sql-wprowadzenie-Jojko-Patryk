@@ -1,5 +1,5 @@
 .title {
-    color: blue;
+    color: red;
     align-items:center
   }
   
@@ -18,7 +18,7 @@
   }
   
   .colorRed {
-    background-color: red;
+    background-color: darkgray;
     width: 100%;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
   }
   
   .colorBlue {
-    background-color: aqua;
+    background-color: gainsboro;
     width: auto;
     height: fit-content;
     overflow: hidden;
@@ -39,7 +39,7 @@
   }
   
   .colorGreen {
-    background-color: lime;
+    background-color: gray;
     width: auto;
     height: auto;
     padding-left: 10%;
@@ -58,5 +58,13 @@ h3 {
     font-display: Arial;
 }
 
+body {
+ background: lightgray;
 
-  
+}
+
+.nav_icon {
+
+  height: 50px;
+  width: 50px;
+}
