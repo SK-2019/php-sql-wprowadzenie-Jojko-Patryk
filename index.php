@@ -8,11 +8,11 @@
 </head>
 <body>
 <div class="container">
-<div class="item colorDG">
+<div class="item colorOne">
     
     <h1 class="title">Patryk Jojko</h1>
 </div>
-<div class="item colorWS">
+<div class="item colorTwo">
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
     <a href="pracownicy.php">Pracownicy</a>
     <a href="organizacja.php">Pracownicy i Organizacja</a>

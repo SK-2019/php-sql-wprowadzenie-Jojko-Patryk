@@ -3,29 +3,29 @@
     align-items:center
   }
   
-  .container {
+.container {
     background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
    
   }
   
-  .item {
+.item {
     width: 200px;
     height: 100px;
     margin: 10px;
   
-  }
+}
   
-  .colorDG {
+.colorOne {
     background-color: darkgray;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-  }
+}
   
-  .colorWS {
+.colorTwo {
     background-color: whitesmoke;
     width: 20%;
     height: fit-content;
@@ -36,9 +36,9 @@
     
   
   
-  }
+}
   
-  .colorLG {
+.colorThree {
     background-color: lightgray;
     width: 76%;
     height: fit-content;
@@ -47,7 +47,7 @@
     align-items: column;
     flex-direction: column;
   
-  }
+}
 
 
 body {
@@ -55,7 +55,7 @@ body {
     display:flex;
     flex-direction:column;
     align-items:center;
-    }
+}
 h2{
     color: black;
     
