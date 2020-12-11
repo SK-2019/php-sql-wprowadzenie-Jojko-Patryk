@@ -27,7 +27,7 @@
   
   .colorBlue {
     background-color: aqua;
-    width: 20%;
+    width: auto;
     height: fit-content;
     overflow: hidden;
     display: flex;
