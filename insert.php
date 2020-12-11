@@ -11,14 +11,20 @@
     <div class="container">
       <div class="item colorRed">
         
-        <h1 class="title">Patryk Jojko</h1>
+      <h1 class="title">
+        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>  
+        Patryk Jojko
+        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+        </h1>
       </div>
       <div class="item colorBlue">
           <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
-            
+
           </a>
           <a href="pracownicy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
