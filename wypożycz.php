@@ -17,7 +17,7 @@
     <a href="daneDoBazy.php">Dane Do Bazy</a>
     <a href="biblioteka.php">Książki</a>
     
-
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
 
 </div>
 
