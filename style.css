@@ -43,7 +43,7 @@
     width: 76%;
     height: auto;
     overflow: hidden;
-    
+    display:flex;
     align-items: column;
     
   
