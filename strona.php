@@ -8,20 +8,61 @@
 </head>
 <body>
 
-<div class=nav>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
-    |
-    <a href="pracownicy.php">Pracownicy</a>
-    <a href="organizacja.php">Pracownicy i Organizacja</a>
-    <a href="funkcje.php">Funkcje Agregujące</a>
-    <a href="dataczas.php">Data i Czas</a>
-    <a href="formularz.html">Zakładka testowa</a>
-    <a href="daneDoBazy.php">Dane Do Bazy</a>
-    <a href="biblioteka.php">Książki</a>
-    
+<div class="item colorBlue">
+          <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Github
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+          </a>
+          <a href="pracownicy.php">
+            Pracownicy
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
-</div>
+          </a>
+          <a href="organizacja.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Pracownicy i Organizacja
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="funkcje.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Funkcje Agregujące
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="dataczas.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Data i Czas
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="formularz.html">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Zakładka testowa
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="daneDoBazy.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Dane Do Bazy
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="biblioteka.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Książki
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+      </div>
 
 
 
