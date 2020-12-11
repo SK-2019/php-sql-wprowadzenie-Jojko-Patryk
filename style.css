@@ -40,8 +40,10 @@
   
   .colorGreen {
     background-color: lime;
-    width: 76%;
+    width: auto;
     height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
     overflow: hidden;
     display:flex;
     align-items: column;
