@@ -85,7 +85,7 @@ echo("<h2> Zarobki:".$_POST["zarobki"]."</h2>");
 echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
 
-require("/ConStyle/connect.php");
+require("connect.php");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
@@ -103,7 +103,7 @@ if ($conn->connect_error) {
   
   $conn->close();
 
-  require("/ConStyle/connect.php");
+  require("connect.php");
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy</h2>");
     echo("<h3>".$sql."</h3>");
