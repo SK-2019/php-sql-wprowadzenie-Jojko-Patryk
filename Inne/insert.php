@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CzyToDziała.jpg</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Connect%20i%20Style/style.css" />
   </head>
   <body>
     <div class="container">
@@ -20,54 +20,54 @@
         </h1>
       </div>
       <div class="item colorBlue">
-          <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
+      <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
           </a>
-          <a href="pracownicy.php">
+          <a href="PracOrgFunc/pracownicy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="organizacja.php">
+          <a href="PracOrgFunc/organizacja.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy i Organizacja
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="funkcje.php">
+          <a href="PracOrgFunc/funkcje.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Funkcje Agregujące
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="dataczas.php">
+          <a href="PracOrgFunc/dataczas.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Data i Czas
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="formularz.html">
+          <a href="Inne/formularz.html">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Zakładka testowa
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="daneDoBazy.php">
+          <a href="Inne/daneDoBazy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Dane Do Bazy
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="biblioteka.php">
+          <a href="Biblioteka/biblioteka.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Książki
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
@@ -76,25 +76,34 @@
           </a>
       </div>
       <div class="item colorGreen">
-
-    <form action="insert.php" method="post">
-        <input type="text" name="imie" placeholder="Imię"></br>
-        <input type="number" name="dzial" placeholder="Dział"></br>
-        <input type="number" name="zarobki" placeholder="Zarobki"></br>
-        <input type="date" name="data_urodzenia" placeholder="Data Urodzenia"></br>
-        <input type="submit" value="Dodaj">
-    </form>
-
-    <form action="delete.php" method="post">
-        <input type="number" name="id" placeholder="ID pracownika"></br>
-     
-
-        <input type="submit" value="Usun">
-    </form>  
-    
 <?php
 
-require("connect.php");
+
+echo("<h2> Imie:".$_POST["imie"]."</h2>");
+echo("<h2> Dział:".$_POST["dzial"]."</h2>");
+echo("<h2> Zarobki:".$_POST["zarobki"]."</h2>");
+echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
+
+
+require("Connect%20i%20Style/connect.php");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  
+  $sql = ("INSERT INTO pracownicy (id_pracownicy,imie, dzial, zarobki, data_urodzenia) VALUES (NULL,'".$_POST['imie']."', ".$_POST['dzial'].", ".$_POST['zarobki'].",'".$_POST['data_urodzenia']."')");
+  echo "<li>".$sql;
+  
+  
+  
+  if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+  
+  $conn->close();
+
+  require("Connect%20i%20Style/connect.php");
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy</h2>");
     echo("<h3>".$sql."</h3>");
@@ -105,32 +114,15 @@ require("connect.php");
             echo("<th>Zarobki</th>");
             echo("<th>Data_Urodzenia</th>");
             echo("<th>Dział</th>");
-            echo("<th>Usuń Pracownika</th>");
             while($row=$result->fetch_assoc()){ 
             echo("<tr>");
-                echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>
-
-
-                <td>
-
-                    <form action='delete.php' method='POST'>
-                        <input type='hidden' name='id' value='".$row['id_pracownicy']."'>
-                        <input type='submit' value='Usuń'>
-                    </form>
-
-                    </td>
-
-                    ");
-
+                echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["dzial"]."</td>");
 
             echo("</tr>");
         }
 
         echo("</table>");
-
-
-?>
+  ?>
 </div>
-
 </body>
 </html>
