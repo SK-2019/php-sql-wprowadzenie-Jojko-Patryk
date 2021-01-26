@@ -79,7 +79,7 @@
 
 <?php
 
-require("/connect.php");
+require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
 $sql = ('SELECT SUM(zarobki) as suma_zarobki FROM pracownicy');
 echo("<h2>Suma zarobków wszystkich pracowników</h2>");
 echo("<h3>".$sql."</h3>");

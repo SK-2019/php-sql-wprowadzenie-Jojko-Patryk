@@ -80,7 +80,7 @@
 
 echo("<h2> ID pracownika wybranego do usunięcia:".$_POST["id"]."</h2>"); 
 
-require("connect.php");
+require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
@@ -97,7 +97,7 @@ if ($conn->query($sql) === TRUE) {
   
   $conn->close();
 
-  require("/connect.php");
+  require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy</h2>");
     echo("<h3>".$sql."</h3>");

@@ -94,7 +94,7 @@
     
 <?php
 
-require("/connect.php");
+require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy</h2>");
     echo("<h3>".$sql."</h3>");

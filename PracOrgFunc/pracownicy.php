@@ -79,7 +79,7 @@
 
 <?php
 
-    require("/connect.php");
+    require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
     $sql = ('SELECT imie, zarobki, data_urodzenia, dzial FROM pracownicy WHERE dzial=2');
     echo("<h2>Pracownicy tylko z działu 2");
     echo("<h3>".$sql."</h3>");
