@@ -79,7 +79,7 @@
     
 <?php
 
-require("connect.php");
+require("/connect.php");
 $sql = ('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy');
 echo("<h2>Wiek poszczególnych pracowników (w latach)</h2>");
 echo("<h3>".$sql."</h3>");

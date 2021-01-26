@@ -109,7 +109,7 @@ echo("</form>");
 
 
 
-require("connect2.php");
+require("/connect2.php");
 $sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = bibliotekaAutor_ID AND id_tytuł = bibliotekaTytul_ID');
 echo("<h2>Dane w Bibliotece</h2>");
 echo("<h3>".$sql."</h3>");
