@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CzyToDziała.jpg</title>
-    <link rel="stylesheet" href="Connect%20i%20Style/style.css" />
+    <link rel="stylesheet" href="/ConStyle/style.css" />
   </head>
   <body>
     <div class="container">
@@ -20,54 +20,54 @@
         </h1>
       </div>
       <div class="item colorBlue">
-          <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
+      <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
           </a>
-          <a href="PracOrgFunc/pracownicy.php">
+          <a href="/PracOrgFunc/pracownicy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="PracOrgFunc/organizacja.php">
+          <a href="/PracOrgFunc/organizacja.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy i Organizacja
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="PracOrgFunc/funkcje.php">
+          <a href="/PracOrgFunc/funkcje.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Funkcje Agregujące
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="PracOrgFunc/dataczas.php">
+          <a href="/PracOrgFunc/dataczas.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Data i Czas
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="Inne/formularz.html">
+          <a href="/Inne/formularz.html">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Zakładka testowa
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="Inne/daneDoBazy.php">
+          <a href="/Inne/daneDoBazy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Dane Do Bazy
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="Biblioteka/biblioteka.php">
+          <a href="/Biblioteka/biblioteka.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Książki
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
@@ -78,7 +78,7 @@
       <div class="item colorGreen">
 <?php
 
-require("Connect%20i%20Style/connect2.php");
+require("/ConStyle/connect2.php");
 
 $sql1 = ("SELECT * FROM bibliotekaAutor"); 
 $sql2 = ("SELECT * FROM bibliotekaTytuł"); 
@@ -109,7 +109,7 @@ echo("</form>");
 
 
 
-require("connect2.php");
+require("/ConStyle/connect2.php");
 $sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = bibliotekaAutor_ID AND id_tytuł = bibliotekaTytul_ID');
 echo("<h2>Dane w Bibliotece</h2>");
 echo("<h3>".$sql."</h3>");

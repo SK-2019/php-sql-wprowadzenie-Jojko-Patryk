@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CzyToDziała.jpg</title>
-    <link rel="stylesheet" href="Connect%20i%20Style/style.css" />
+    <link rel="stylesheet" href="/ConStyle/style.css" />
   </head>
   <body>
     <div class="container">
@@ -25,49 +25,49 @@
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
           </a>
-          <a href="PracOrgFunc/pracownicy.php">
+          <a href="/PracOrgFunc/pracownicy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="PracOrgFunc/organizacja.php">
+          <a href="/PracOrgFunc/organizacja.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy i Organizacja
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="PracOrgFunc/funkcje.php">
+          <a href="/PracOrgFunc/funkcje.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Funkcje Agregujące
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="PracOrgFunc/dataczas.php">
+          <a href="/PracOrgFunc/dataczas.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Data i Czas
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="Inne/formularz.html">
+          <a href="/Inne/formularz.html">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Zakładka testowa
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="Inne/daneDoBazy.php">
+          <a href="/Inne/daneDoBazy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Dane Do Bazy
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
 
           </a>
-          <a href="Biblioteka/biblioteka.php">
+          <a href="/Biblioteka/biblioteka.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Książki
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
@@ -85,7 +85,7 @@ echo("<h2> Zarobki:".$_POST["zarobki"]."</h2>");
 echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
 
-require("Connect%20i%20Style/connect.php");
+require("/ConStyle/connect.php");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
@@ -103,7 +103,7 @@ if ($conn->connect_error) {
   
   $conn->close();
 
-  require("Connect%20i%20Style/connect.php");
+  require("/ConStyle/connect.php");
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy</h2>");
     echo("<h3>".$sql."</h3>");
