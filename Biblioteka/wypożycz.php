@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Patryk Jojko</title>
-    <link rel="stylesheet" href="ConStyle/style.css"/>
+    <link rel="stylesheet" href="/ConStyle/style.css"/>
   </head>
   <body>
     <div class="container">
@@ -74,7 +74,7 @@
 
 <?php
 
-echo("<h2> Id:".$_POST["id_autor"]."</h2>");
+
 echo("<h2> Autor:".$_POST["Autor"]."</h2>");
 
 ?>
