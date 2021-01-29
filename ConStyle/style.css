@@ -30,7 +30,7 @@
     background-color: gainsboro;
     width: auto;
     max-width: 20%;
-    height: fit-content;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: column;
