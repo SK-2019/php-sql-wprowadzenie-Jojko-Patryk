@@ -19,6 +19,7 @@
 
         </h1>
       </div>
+      <div class="item colorBlue">
       <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Github
