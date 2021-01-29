@@ -1,78 +1,82 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ConStyle/style2.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Patryk Jojko</title>
-</head>
-<body>
-<div class=nav>
-    <a href="pracownicy.php">Pracownicy</a>
-    <a href="organizacja.php">Pracownicy i Organizacja</a>
-    <a href="funkcje.php">Funkcje Agregujące</a>
-    <a href="dataczas.php">Data i Czas</a>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
-    <a href="formularz.html">Zakładka testowa</a>
-    <a href="daneDoBazy.php">Dane Do Bazy</a>
-    <a href="biblioteka.php">Książki</a>
-    
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">Github</a>
+    <link rel="stylesheet" href="ConStyle/style.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item colorRed">
+        
+        <h1 class="title">
+        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>  
+        Patryk Jojko
+        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
-</div>
+
+        </h1>
+      </div>
+      <div class="item colorBlue">
+      <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Github
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+          </a>
+          <a href="/PracOrgFunc/pracownicy.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Pracownicy
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="/PracOrgFunc/organizacja.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Pracownicy i Organizacja
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="/PracOrgFunc/funkcje.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Funkcje Agregujące
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="/PracOrgFunc/dataczas.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Data i Czas
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="/Inne/daneDoBazy.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Dane Do Bazy
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          </a>
+          <a href="/Biblioteka/biblioteka.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Książki
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+          
+
+          </a>
+      </div>
+      <div class="item colorGreen">
 
 <?php
 
 
-body {
-    background-color: darkblue;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-h2{
-    color: black;
-    
-}
-
-h3{
-    color: black;
-}
-
-nav{
-    color: black;
-    
-}
-
-table{
-    color: black;
-    
-}
-
-th{
-    background-color:#4CAF50;
-    color: white     ;
-     
-}
-
-td{
-    text-align: center;
-    
-}
-
-input{
-    margin: 6px
-}
-
-font{ 
-    font-size: 24;
-    font-family: Arial, Helvetica, sans-serif;
-    font: bold;
-    font-display: Arial;
-} 
-
 
 ?>
-    
-</body>
+    </div>
+  </body>
 </html>

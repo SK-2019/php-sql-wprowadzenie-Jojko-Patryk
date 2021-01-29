@@ -74,7 +74,7 @@
 
 <?php
 
-require("/ConStyle/connect.php");
+require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy");
     echo("<h3>".$sql."</h3>");
