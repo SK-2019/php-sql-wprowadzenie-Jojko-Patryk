@@ -9,7 +9,7 @@
 <body>
 
 <div class="item colorBlue">
-      <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
+<a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
@@ -42,13 +42,6 @@
 
 
           </a>
-          <a href="/Inne/formularz.html">
-            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
-            Zakładka testowa
-            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
-
-
-          </a>
           <a href="/Inne/daneDoBazy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Dane Do Bazy
@@ -61,6 +54,8 @@
             Książki
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
+
+          
 
           </a>
       </div>
