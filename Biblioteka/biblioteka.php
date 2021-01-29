@@ -84,6 +84,7 @@ $result=$conn->query($sql1);
 echo("<form action='wypożycz.php' method='POST'>");
 echo("<label for='Autor'><h4>Wybierz autora:</h4></label>");
 echo("<select name='Autor' id='id_autor'>");
+echo("</select>");
 echo("<input type='submit' value='Submit'>");
 while($row=$result->fetch_assoc()) 
 {
