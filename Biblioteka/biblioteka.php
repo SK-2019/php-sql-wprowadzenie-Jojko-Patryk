@@ -84,13 +84,13 @@ $result=$conn->query($sql1);
 echo("<form action='wypożycz.php' method='POST'>");
 echo("<label for='Autor'><h4>Wybierz autora:</h4></label>");
 echo("<select name='Autor' id='id_autor'>");
-echo("</select>");
-echo("<input type='submit' value='Submit'>");
+
 while($row=$result->fetch_assoc()) 
 {
     echo("<option value=".$row['id_autor'].">".$row['Autor']."</option>");
 }
 echo("</select>");
+echo("<input type='submit' value='Submit'>");
 $result=$conn->query($sql2);
 echo("<label for='Tytuł'><h4>Wybierz tytuł:</h4></label>");
 echo("<select name='Tytuł' id='id_tytuł'>");
