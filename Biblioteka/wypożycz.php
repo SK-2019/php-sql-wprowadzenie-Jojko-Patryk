@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -74,7 +74,8 @@
 
 <?php
 
-
+echo("<h2> Id:".$_POST["id_autor"]."</h2>");
+echo("<h2> Autor:".$_POST["Autor"]."</h2>");
 
 ?>
     </div>
