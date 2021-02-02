@@ -73,7 +73,7 @@
       <div class="item colorGreen">
 
 <?php
-require(($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
 
 echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
 
