@@ -75,7 +75,7 @@
 <?php
 
 
-echo("<h2> Autor:".$_POST["Autor"]."</h2>");
+echo("<h2> Autor:".$_POST["id_autor"]."</h2>");
 
 ?>
     </div>
