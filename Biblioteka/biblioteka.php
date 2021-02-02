@@ -83,7 +83,7 @@ echo("<h3>".$sql2."</h4>");
 $result=$conn->query($sql1);
 echo("<form action='wypożycz.php' method='POST'>");
 echo("<label for='Autor'><h4>Wybierz autora:</h4></label>");
-echo("<select name='Autor' id='id_autor'>");
+echo("<select name='Autor'>");
 
 while($row=$result->fetch_assoc()) 
 {
