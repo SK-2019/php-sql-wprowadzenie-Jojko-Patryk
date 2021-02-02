@@ -73,10 +73,21 @@
       <div class="item colorGreen">
 
 <?php
+$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = '.$_POST["Autor"].'AND id_tytuł = bibliotekaTytul_ID');
+echo("<h3>".$sql."</h4>");
+echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
+  $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>id</th>");
+        echo("<th>Autor</th>");
+        echo("<th>Tytuł</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+            echo("<td>".$row["id"]."</td><td>".$row["Autor"]."</td><td>".$row["Tytuł"]);
+        echo("</tr>");
 
 
-echo("<h2> Autor:".$_POST["Autor"]."</h2>");
-echo("<select name='Autor' id='id_tytuł'>");
+
 
 ?>
     </div>
