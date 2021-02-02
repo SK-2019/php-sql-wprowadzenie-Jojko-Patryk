@@ -77,23 +77,7 @@
 
 echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
 require($_SERVER['DOCUMENT_ROOT'] . '/connect2.php');
-$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor ='".$_POST['Autor']."'');
-echo("<h2>Dane w Bibliotece</h2>");
-echo("<h3>".$sql."</h3>");
-    $result = $conn->query($sql);
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>Autor</th>");
-        echo("<th>Tytuł</th>");
-    while($row=$result->fetch_assoc()){
-        echo("<tr>");
-            echo("<td>".$row["id"]."</td><td>".$row["Autor"]."</td><td>".$row["Tytuł"]);
-        echo("</tr>");
-    
 
-    }
-
-    echo("</table>");
 
 
 ?>
