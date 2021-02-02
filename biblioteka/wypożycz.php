@@ -76,6 +76,7 @@
 
 
 echo("<h2> Autor:".$_POST["Autor"]."</h2>");
+echo("<select name='Autor' id='id_tytuł'>");
 
 ?>
     </div>
