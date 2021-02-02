@@ -83,9 +83,11 @@ echo("<h3>".$sql2."</h4>");
 $result=$conn->query($sql1);
 echo("<form action='wypożycz.php' method='POST'>");
 echo("<label for='Autor'><h4>Wybierz autora:</h4></label>");
-echo("<select name='Autor'>");
-
-
+echo("<select name='Autor' id='id_tytuł'>");
+while($row=$result->fetch_assoc()) 
+{
+    echo("<option value=".$row['id_autor'].">".$row['Autor']."</option>");
+}
 echo("</select>");
 echo("<input type='submit' value='Submit'>");
 $result=$conn->query($sql2);
