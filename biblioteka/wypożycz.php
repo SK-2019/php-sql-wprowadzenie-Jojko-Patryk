@@ -77,8 +77,8 @@ require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
 
 echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
 
-$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = '".$_POST['Autor']."' AND id_tytuł = bibliotekaTytul_ID');
-echo("<h3>".$sql."</h4>");
+$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = bibliotekaAutor_ID AND id_tytuł = bibliotekaTytul_ID');
+echo("<h3>".$sql."</h3>");
 echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
   $result = $conn->query($sql);
         echo("<table border=1>");
@@ -89,8 +89,6 @@ echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
         echo("<tr>");
             echo("<td>".$row["id"]."</td><td>".$row["Autor"]."</td><td>".$row["Tytuł"]);
         echo("</tr>");
-    }
-    echo("</table>");
 
 
 ?>
