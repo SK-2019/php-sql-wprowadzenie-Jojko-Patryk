@@ -73,7 +73,7 @@
       <div class="item colorGreen">
 
 <?php
-$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = '.$_POST["Autor"].'AND id_tytuł = bibliotekaTytul_ID');
+$sql = ('SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` WHERE id_autor = '".$_POST['Autor']."' AND id_tytuł = bibliotekaTytul_ID');
 echo("<h3>".$sql."</h4>");
 echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
   $result = $conn->query($sql);
