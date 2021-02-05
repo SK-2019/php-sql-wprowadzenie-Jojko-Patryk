@@ -76,10 +76,10 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/connect2.php');
 
 $sql1 = ("SELECT * FROM bibliotekaAutor"); 
-$sql2 = ("SELECT * FROM bibliotekaTytuł"); 
+
 echo("<h2>Wypożyczanie</h2>");
 echo("<h3>".$sql1."</h4>");
-echo("<h3>".$sql2."</h4>");
+
 $result=$conn->query($sql1);
 echo("<form action='wypożycz.php' method='POST'>");
 echo("<label for='Autor'><h4>Wybierz autora:</h4></label>");
@@ -89,16 +89,6 @@ while($row=$result->fetch_assoc())
     echo("<option value=".$row['id_autor'].">".$row['Autor']."</option>");
 }
 echo("</select>");
-echo("<input type='submit' value='Submit'>");
-$result=$conn->query($sql2);
-echo("<label for='Tytuł'><h4>Wybierz tytuł:</h4></label>");
-echo("<select name='Tytuł' id='id_tytuł'>");
-while($row=$result->fetch_assoc())
-{
-    echo("<option value=".$row['id_tytuł'].">".$row['Tytuł']."</option>");
-}
-echo("</select>");
-echo("<input type='submit' value='Wypożycz'>'");
 echo("</form>");
 
 

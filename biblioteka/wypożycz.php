@@ -96,6 +96,10 @@ while($row=$result->fetch_assoc()){
 
 echo("</table>");
 ?>
+<a href="/biblioteka/biblioteka.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Powrót do strony z wyborem autora
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
     </div>
   </body>
 </html>
