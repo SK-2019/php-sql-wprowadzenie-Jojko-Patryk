@@ -1,0 +1,24 @@
+.container {
+    background-color: purple;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 800px;
+    justify-content: flex-start;
+  }
+  
+  .boxy {
+    background-color: orange;
+    margin: 1px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+  }
+  .boxz {
+    background-color: aqua;
+    margin: 1px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+  }
