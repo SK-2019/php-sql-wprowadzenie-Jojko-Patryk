@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<a href="/flexbox/zad2.php">
+<a href="/flexbox/zad3.php">
     <div class="container">
       
       
