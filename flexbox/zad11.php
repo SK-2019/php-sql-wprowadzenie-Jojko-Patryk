@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/flexbox/style11.css" />
-    <title>Document</title>
+    <title>Zadanie 11</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         Do:Zad1
       </div>
       <div class="boxz">
-        text
+        Zad8=zad12
     
 </body>
 </html>
