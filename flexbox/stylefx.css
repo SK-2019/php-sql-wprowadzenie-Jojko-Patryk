@@ -17,6 +17,12 @@
     height: fit-content;
     margin: 10px;
 }
+.nav3 {
+    background-color: orange;
+    width: fit-content;
+    height: 200px;
+    margin: 10px;
+}
 
 .container2 {
     background-color: blue;
