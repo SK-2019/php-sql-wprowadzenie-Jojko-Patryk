@@ -7,6 +7,12 @@
 
 .nav {
     background-color: orange;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.nav2 {
+    background-color: orange;
     width: fit-content;
     height: fit-content;
     margin: 10px;
