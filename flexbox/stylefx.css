@@ -7,8 +7,8 @@
 
 .nav {
     background-color: orange;
-    width: fit-content;
-    height: fit-content;
+    width: 25%;
+    height: 25%;
     margin: 10px;
 }
 
@@ -147,6 +147,19 @@
     transition: 0.2%;
     width: 60px;
     }
+.ar4 {
+    padding: 1rem;
+    background-color: orange;
+    border-radius: 10px;
+    margin: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2%;
+    width: 60px;
+    }
 .ar1:hover{
 
 padding-right: 80px;
@@ -172,4 +185,11 @@ border-width: 10px;
 color: red;
 background-color: aquamarine;
 
+}
+
+.ar4:hover {
+
+  transform:translatey(-1rem);
+  transition: 1s;
+  background-color: pink;
 }
