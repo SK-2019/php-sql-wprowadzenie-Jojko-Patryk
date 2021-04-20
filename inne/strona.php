@@ -8,8 +8,19 @@
 </head>
 <body>
 
-<div class="item colorBlue">
-<a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
+<div class="container">
+      <div class="item colorRed">
+        
+        <h1 class="title">
+        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>  
+        Patryk Jojko
+        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+
+        </h1>
+      </div>
+      <div class="item colorBlue">
+      <a href="https://github.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
@@ -53,13 +64,25 @@
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Książki
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+          </a>
+            
+            <a href="/flexbox/index.html">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            flexbox
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
+            <a href="/multiple/relacje.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            Relacje
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+
 
 
           
 
           </a>
       </div>
-
+      <div class="item colorGreen">
 
 
 <?php
