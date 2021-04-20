@@ -21,13 +21,6 @@
       </div>
       <div class="item colorBlue">
         <?php include("menu.php") ?>
-      
-
-
-
-          
-
-          
       </div>
       <div class="item colorGreen">
 
