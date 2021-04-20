@@ -20,7 +20,7 @@
         </h1>
       </div>
       <div class="item colorBlue">
-        <?php include("menu.php") ?>
+        <?php include("/assets/menu.php") ?>
       </div>
       <div class="item colorGreen">
 
