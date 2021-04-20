@@ -15,6 +15,7 @@
         </div>
         <div class="item colorBlue">
         <?php include("../assets/menu.php") ?>
+        <?php include("../assets/relations.php") ?>
       </div>
       <div class="item colorGreen">
 <?
