@@ -115,7 +115,7 @@ while($row=$result->fetch_assoc()){
 }
 echo("</table>");
 
-$sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id desc';
+$sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id asc';
 echo("<h3>Autorzy i Tytuły</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
