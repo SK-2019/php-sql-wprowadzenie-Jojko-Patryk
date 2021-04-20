@@ -89,8 +89,8 @@ $sql = "SELECT * FROM autor";
 echo("<h3>Autorzy</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql) or die($conn->error);
-echo("<table border=0>");
-echo("<th>autor.id</th>");
+echo("<table border=1>");
+echo("<th>id_autor</th>");
 echo("<th>nazwisko</th>");
 
 while($row=$result->fetch_assoc()){
@@ -104,8 +104,8 @@ $sql = "SELECT * FROM tytul";
 echo("<h3>Tytuły</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql) or die($conn->error);
-echo("<table border=0>");
-echo("<th>tytul.id</th>");
+echo("<table border=1>");
+echo("<th>id_tytul</th>");
 echo("<th>tytul</th>");
 
 while($row=$result->fetch_assoc()){
@@ -119,7 +119,7 @@ $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and ty
 echo("<h3>Autorzy i Tytuły</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql) or die($conn->error);
-echo("<table border=0>");
+echo("<table border=1>");
 echo("<th>id</th>");
 echo("<th>autor_id</th>");
 echo("<th>tytul_id</th>");
