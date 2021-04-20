@@ -95,7 +95,7 @@ echo("<th>nazwisko</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['autor.id']."</td><td>".$row['nazwisko']."</td>");
+    echo("<td>".$row['autor_id']."</td><td>".$row['nazwisko']."</td>");
     echo("</tr>");
 }
 echo("</table>");
@@ -110,7 +110,7 @@ echo("<th>tytul</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['tytul.id']."</td><td>".$row['tytul']."</td>");
+    echo("<td>".$row['tytul_id']."</td><td>".$row['tytul']."</td>");
     echo("</tr>");
 }
 echo("</table>");
