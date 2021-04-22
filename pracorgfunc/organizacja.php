@@ -20,7 +20,7 @@
 
 <?php
  
-require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
+require('../connect/connect.php');
 $sql = ('SELECT imie, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
 echo("<h2>Pracownicy z nazwą działów</h2>");
 echo("<h3>".$sql."</h3>");

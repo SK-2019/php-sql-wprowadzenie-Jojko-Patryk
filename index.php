@@ -20,7 +20,7 @@
 
 <?php
 
-require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
+require('/connect/connect.php');
     $sql = ('SELECT * FROM pracownicy');
     echo("<h2>Pracownicy");
     echo("<h3>".$sql."</h3>");

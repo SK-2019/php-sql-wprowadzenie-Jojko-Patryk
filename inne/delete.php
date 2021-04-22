@@ -21,7 +21,7 @@
 
 echo("<h2> ID pracownika wybranego do usunięcia:".$_POST["id"]."</h2>"); 
 
-require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
+require('../connect/connect.php');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }

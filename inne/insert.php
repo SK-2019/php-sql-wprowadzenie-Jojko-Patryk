@@ -26,7 +26,7 @@ echo("<h2> Zarobki:".$_POST["zarobki"]."</h2>");
 echo("<h2> Data Urodzenia:".$_POST["data_urodzenia"]."</h2>");
 
 
-require($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
+require('../connect/connect.php');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }

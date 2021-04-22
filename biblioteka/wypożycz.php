@@ -21,7 +21,7 @@
 
 
 echo("<h2> ID Autora:".$_POST["Autor"]."</h2>");
-require($_SERVER['DOCUMENT_ROOT'] . '/connect2.php');
+require('../connect/connect2.php');
 
 $sql = ("SELECT * FROM `bibliotekaAT`, `bibliotekaAutor`, `bibliotekaTytuł` where bibliotekaAutor_ID=id_autor and bibliotekaTytul_ID=id_tytuł and bibliotekaAutor_ID='".$_POST['Autor']."'");
 

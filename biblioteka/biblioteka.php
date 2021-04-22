@@ -19,7 +19,7 @@
       <div class="item colorGreen">
 <?php
 
-require($_SERVER['DOCUMENT_ROOT'] . '/connect2.php');
+require('../connect/connect2.php');
 
 $sql1 = ("SELECT * FROM bibliotekaAutor"); 
 echo("<h2>Wypożyczanie</h2>");
