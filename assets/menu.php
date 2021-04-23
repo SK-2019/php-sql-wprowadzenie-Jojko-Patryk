@@ -4,6 +4,14 @@
             Github
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
           </a>
+          <a href="../index.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            INDEX
+            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            </a>
+
+
+
           <a href="/pracorgfunc/pracownicy.php">
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Pracownicy
@@ -50,15 +58,30 @@
             flexbox
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
-            <a href="/multiple/relacje.php">
+          </a>  
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
             Relacje
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
-          </a>
           
-            <a href="../index.php">
-            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
-            INDEX
-            <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+            <a href="../multiple/autor-tytul.php">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
+            Autor|-|Tytul
+            <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
             </a>
+<a href="Placeholder">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
+            Placeholder
+            <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
+
+
+          </a>
+<a href="Placeholder">
+            <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
+            Placeholder
+            <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
+
+
+          </a>
+                  
+            
     
