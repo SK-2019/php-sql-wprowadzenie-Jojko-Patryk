@@ -58,9 +58,9 @@
             <img class="nav_icon" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
 
           </a>  
-            
+          <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
             Relacje:
-            
+          <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>  
 
             <a href="../multiple/autor-tytul">
             <img class="nav_icon" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/loading.gif"/>
