@@ -39,8 +39,6 @@ require('connect/connect.php');
 
         echo("</table>");
 
-function table
-
 
 
 ?>
