@@ -50,7 +50,7 @@ while($row=$result->fetch_assoc()){
 }
 echo("</table>");
 
-$sql = 'SELECT * FROM Nauczyciel, Klasa, Both where ID.N = ID_Nau and ID.K = ID_Klasa Order by id asc';
+$sql = 'SELECT * FROM Nauczyciel, Klasa, Both where IDN = ID_Nau and IDK = ID_Klasa Order by id asc';
 echo("<h3>Autorzy i Tytuły</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);

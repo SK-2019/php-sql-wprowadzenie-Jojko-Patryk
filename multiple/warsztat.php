@@ -50,7 +50,7 @@ while($row=$result->fetch_assoc()){
 }
 echo("</table>");
 
-$sql = 'SELECT * FROM C.Producent, C.Przedmiot, C.Both where ID.P = ID_Prod and ID.I = ID_Item Order by id asc';
+$sql = 'SELECT * FROM C.Producent, C.Przedmiot, C.Both where IDP = ID_Prod and IDI = ID_Item Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -63,7 +63,7 @@ echo("<th>Przedmiot</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['id']."</td><td>".$row['ID.P']."</td><td>".$row['Producent']."</td><td>".$row['ID.I']."</td><td>".$row['Przedmiot']."</td>");
+    echo("<td>".$row['id']."</td><td>".$row['IDP']."</td><td>".$row['Producent']."</td><td>".$row['IDI']."</td><td>".$row['Przedmiot']."</td>");
     echo("</tr>");
 }
 echo("</table>");
