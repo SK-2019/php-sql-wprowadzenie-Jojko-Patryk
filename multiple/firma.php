@@ -20,7 +20,7 @@
       <div class="item colorGreen">
 <?
 require('../connect/connect3.php');
-$sql = "SELECT * FROM C.Producent";
+$sql = "SELECT * FROM Producent";
 echo("<h3>Producent</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
