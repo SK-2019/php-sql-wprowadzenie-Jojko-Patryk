@@ -20,7 +20,7 @@
       <div class="item colorGreen">
 <?
 require('../connect/connect3.php');
-$sql = "SELECT * FROM B.Klasa";
+$sql = "SELECT * FROM Klasa";
 echo("<h3>Pracownicy</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -35,7 +35,7 @@ while($row=$result->fetch_assoc()){
 }
 echo("</table>");
 
-$sql = "SELECT * FROM B.Nauczyciel";
+$sql = "SELECT * FROM Nauczyciel";
 echo("<h3>Tytuły</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -50,7 +50,7 @@ while($row=$result->fetch_assoc()){
 }
 echo("</table>");
 
-$sql = 'SELECT * FROM B.Nauczyciel, B.Klasa, B.Both where ID.N = ID_Nau and ID.K = ID_Klasa Order by id asc';
+$sql = 'SELECT * FROM Nauczyciel, Klasa, Both where ID.N = ID_Nau and ID.K = ID_Klasa Order by id asc';
 echo("<h3>Autorzy i Tytuły</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
