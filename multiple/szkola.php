@@ -63,7 +63,7 @@ echo("<th>Nauczyciel</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['id']."</td><td>".$row['IDK']."</td><td>".$row['Klasa']."</td><td>".$row['IDN']."</td><td>".$row['Nauczyciel']."</td>");
+    echo("<td>".$row['ID']."</td><td>".$row['IDK']."</td><td>".$row['Klasa']."</td><td>".$row['IDN']."</td><td>".$row['Nauczyciel']."</td>");
     echo("</tr>");
 }
 echo("</table>");
