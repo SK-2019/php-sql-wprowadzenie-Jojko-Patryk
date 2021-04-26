@@ -63,7 +63,7 @@ echo("<th>Przedmiot</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['id']."</td><td>".$row['ID.P']."</td><td>".$row['Producent']."</td><td>".$row['ID.I']."</td><td>".$row['Przedmiot']."</td>");
+    echo("<td>".$row['id']."</td><td>".$row['IDP']."</td><td>".$row['Producent']."</td><td>".$row['IDI']."</td><td>".$row['Przedmiot']."</td>");
     echo("</tr>");
 }
 echo("</table>");
