@@ -56,10 +56,10 @@ echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
 echo("<th>id</th>");
-echo("<th>ID.P</th>");
-echo("<th>Producent</th>");
-echo("<th>ID.I</th>");
-echo("<th>Przedmiot</th>");
+echo("<th>IDM</th>");
+echo("<th>Mechanik</th>");
+echo("<th>IDS</th>");
+echo("<th>Pojazd</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
