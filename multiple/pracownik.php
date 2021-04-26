@@ -45,7 +45,7 @@ echo("<th>Dział</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['ID_Dza']."</td><td>".$row['Dzialy']."</td>");
+    echo("<td>".$row['ID_Dza']."</td><td>".$row['Dzial']."</td>");
     echo("</tr>");
 }
 echo("</table>");
@@ -56,14 +56,14 @@ echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
 echo("<th>id</th>");
-echo("<th>IDZA</th>");
+echo("<th>IDDZ</th>");
 echo("<th>Dział</th>");
 echo("<th>IDPS</th>");
 echo("<th>Pracownik</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['ID']."</td><td>".$row['IDZA']."</td><td>".$row['Dzialy']."</td><td>".$row['IDPS']."</td><td>".$row['Pracownik']."</td>");
+    echo("<td>".$row['ID']."</td><td>".$row['IDDZ']."</td><td>".$row['Dzial']."</td><td>".$row['IDPS']."</td><td>".$row['Pracownik']."</td>");
     echo("</tr>");
 }
 echo("</table>");

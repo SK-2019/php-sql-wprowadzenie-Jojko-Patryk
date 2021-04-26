@@ -21,7 +21,7 @@
 <?
 require('../connect/connect3.php');
 $sql = "SELECT * FROM Klasa";
-echo("<h3>Pracownicy</h3>");
+echo("<h3>Klasy</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -36,7 +36,7 @@ while($row=$result->fetch_assoc()){
 echo("</table>");
 
 $sql = "SELECT * FROM Nauczyciel";
-echo("<h3>Tytuły</h3>");
+echo("<h3>Nauczyciele</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -51,7 +51,7 @@ while($row=$result->fetch_assoc()){
 echo("</table>");
 
 $sql = 'SELECT * FROM Nauczyciel, Klasa, BBoth where IDN = ID_Nau and IDK = ID_Klasa Order by id asc';
-echo("<h3>Autorzy i Tytuły</h3>");
+echo("<h3>Klasy i Nauczyciele</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");

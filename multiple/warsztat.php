@@ -21,7 +21,7 @@
 <?
 require('../connect/connect3.php');
 $sql = "SELECT * FROM Mechanik";
-echo("<h3>Producent</h3>");
+echo("<h3>Mechanicy</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -36,7 +36,7 @@ while($row=$result->fetch_assoc()){
 echo("</table>");
 
 $sql = "SELECT * FROM Samochody";
-echo("<h3>Item</h3>");
+echo("<h3>Samochody</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
