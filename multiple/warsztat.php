@@ -20,37 +20,37 @@
       <div class="item colorGreen">
 <?
 require('../connect/connect3.php');
-$sql = "SELECT * FROM C.Producent";
+$sql = "SELECT * FROM Mechanik";
 echo("<h3>Producent</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<th>ID_Prod</th>");
-echo("<th>Producent</th>");
+echo("<th>ID_Mech</th>");
+echo("<th>Mechanik</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['ID_Prod']."</td><td>".$row['Producent']."</td>");
+    echo("<td>".$row['ID_Mech']."</td><td>".$row['Mechanik']."</td>");
     echo("</tr>");
 }
 echo("</table>");
 
-$sql = "SELECT * FROM C.Przedmiot";
+$sql = "SELECT * FROM Samochody";
 echo("<h3>Item</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<th>ID_Item</th>");
-echo("<th>Przedmiot</th>");
+echo("<th>ID_Auto</th>");
+echo("<th>Pojazd</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['ID_Item']."</td><td>".$row['Przedmiot']."</td>");
+    echo("<td>".$row['ID_Auto']."</td><td>".$row['Pojazd']."</td>");
     echo("</tr>");
 }
 echo("</table>");
 
-$sql = 'SELECT * FROM C.Producent, C.Przedmiot, C.Both where IDP = ID_Prod and IDI = ID_Item Order by id asc';
+$sql = 'SELECT * FROM Mechanik, Samochody, ABoth where IDM = ID_Mech and IDS = ID_Auto Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -63,7 +63,7 @@ echo("<th>Przedmiot</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['id']."</td><td>".$row['IDP']."</td><td>".$row['Producent']."</td><td>".$row['IDI']."</td><td>".$row['Przedmiot']."</td>");
+    echo("<td>".$row['IDM']."</td><td>".$row['Mechanik']."</td><td>".$row['IDS']."</td><td>".$row['Pojazd']."</td>");
     echo("</tr>");
 }
 echo("</table>");
