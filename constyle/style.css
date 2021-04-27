@@ -81,3 +81,27 @@ body {
   height: 80px;
   width: 80px;
 }
+
+.ars {
+  display: block;
+  padding: 1rem;
+  background-color: orange;
+  border-radius: 10px;
+  margin: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2%;
+  width: 60px;
+  }
+
+  .ars:hover{
+
+transition: 1s;
+border-color: darkred;
+border-width: 10px;
+color: red;
+background-color: gray;
+  }
