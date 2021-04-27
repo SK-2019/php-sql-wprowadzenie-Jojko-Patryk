@@ -65,34 +65,35 @@
           
             <a class="ars" href="../multiple/autor-tytul.php">
             
-            Autor|-|Tytul
+            |Autor||Tytul|
             
             </a>
             
 <a class="ars" href="../multiple/szkola.php">
             
-            Nauczyciel|-|Klasa
+            |Nauczyciel||Klasa|
             
 
 
           </a>
 <a class="ars" href="../multiple/firma.php">
             
-            Producent|-|Produkt
+            |Producent||Produkt|
             
 
 
           </a>
           <a class="ars" href="../multiple/warsztat.php">
             
-            Mechanik|-|Pojazd
+            |Mechanik||Pojazd|
             
 
 
           </a>
           <a class="ars" href="../multiple/pracownik.php">
             
-            Pracownik|-|Dzial
+            |Pracownik||Dzial|
+        
             
 
 
