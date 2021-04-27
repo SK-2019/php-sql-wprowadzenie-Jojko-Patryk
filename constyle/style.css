@@ -34,7 +34,8 @@
     overflow: hidden;
     display: flex;
     align-items: column;
-    flex-direction: column
+    flex-direction: column;
+    
     
   
   
@@ -94,7 +95,7 @@ body {
   text-align: center;
   text-decoration: none;
   transition: 0.2%;
-  width: 100%;
+  width: 90%;
   }
 
   .ars:hover{
