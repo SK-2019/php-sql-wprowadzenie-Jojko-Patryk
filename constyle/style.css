@@ -95,7 +95,7 @@ body {
   text-align: center;
   text-decoration: none;
   transition: 0.2%;
-  width: 90%;
+  width: auto;
   }
 
   .ars:hover{
