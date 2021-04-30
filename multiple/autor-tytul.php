@@ -32,7 +32,7 @@ function table($sql, $conn, $id_x, $nazwa, $data ){
 
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<th>$id_x/th>");
+echo("<th>$id_x</th>");
 echo("<th>$nazwa</th>");
 
 while($row=$result->fetch_assoc()){
@@ -48,7 +48,15 @@ echo("<h2>Autorzy</h2>");
 echo("<li>".$sql."</li>");
 table($sql, $conn, "id_autor", "nazwisko", 'nazwisko');
 
+$sql = "SELECT * FROM tytul"
+echo("<h2>Tytuły</h2>");
+echo("<li>".$sql."</li>");
+table($sql, $conn, "id_tytul", "tytul", 'tytul');
 
+$sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id asc'
+echo("Autorzy i Tytuly")
+echo("<li>".$sql."</li>");
+table($sql, $conn, "nazwisko", "tytul", 'Tytul');
 
 ?>
 
