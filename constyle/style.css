@@ -96,6 +96,11 @@ body {
 
   height: 80px;
   width: 80px;
+  border-radius: 10px;
+  margin: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
 }
 
 .ars {
