@@ -1,7 +1,7 @@
 <h1 class="title">
-        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>  
+        <img class="nav_icons" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/tenor.gif"/>  
         Patryk Jojko
-        <img class="nav_icons" src="https://raw.githubusercontent.com/sk-2019/php-sql-wprowadzenie-Jojko-Patryk/main/notouchplz.png"/>
+        <img class="nav_icons" src="https://raw.githubusercontent.com/SK-2019/php-sql-wprowadzenie-Jojko-Patryk/main/tenor.gif"/>
 
 
         </h1>
