@@ -54,7 +54,7 @@ echo("<li>".$sql."</li>");
 table($sql, $conn, "id_tytul", "tytul", 'tytul');
 
 $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id asc'
-echo("Autorzy i Tytuly")
+echo("Autorzy i Tytuly");
 echo("<li>".$sql."</li>");
 table($sql, $conn, "nazwisko", "tytul", 'Tytul');
 
