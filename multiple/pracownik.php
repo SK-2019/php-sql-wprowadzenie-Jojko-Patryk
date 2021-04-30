@@ -26,53 +26,40 @@ ini_set('display_errors', '1');
 
           
 require('../connect/connect3.php');
+
+function table($sql, $conn, $id_x, $nazwa, $data ){
+
+
+
+
+    $result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>$id_x</th>");
+    echo("<th>$nazwa</th>");
+    
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    }
+
+
 $sql = "SELECT * FROM Pracownik";
 echo("<h3>Pracownicy</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Pra</th>");
-echo("<th>Pracownik</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Pra']."</td><td>".$row['Pracownik']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Pra", "Pracownik", 'Pracownik');
 
 $sql = "SELECT * FROM Dzialy";
 echo("<h3>Działy</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Dza</th>");
-echo("<th>Dział</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Dza']."</td><td>".$row['Dzial']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Dza", "Dzial", 'Dzial');
 
 $sql = 'SELECT * FROM Pracownik, Dzialy, EBoth where IDPS = ID_Pra and IDDZ = ID_Dza Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>IDDZ</th>");
-echo("<th>Dział</th>");
-echo("<th>IDPS</th>");
-echo("<th>Pracownik</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID']."</td><td>".$row['IDDZ']."</td><td>".$row['Dzial']."</td><td>".$row['IDPS']."</td><td>".$row['Pracownik']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "Pracownik", "Dzial", "Dzial");
 
 ?>
 

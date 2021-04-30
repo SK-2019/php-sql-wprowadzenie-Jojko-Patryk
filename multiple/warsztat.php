@@ -24,55 +24,41 @@ ini_set('display_errors', '1');
           ini_set('display_startup_errors', '1');
           error_reporting(E_ALL);
 
-          
+
 require('../connect/connect3.php');
+
+function table($sql, $conn, $id_x, $nazwa, $data ){
+
+
+
+
+    $result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>$id_x</th>");
+    echo("<th>$nazwa</th>");
+    
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    }
+
 $sql = "SELECT * FROM Mechanik";
 echo("<h3>Mechanicy</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Mech</th>");
-echo("<th>Mechanik</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Mech']."</td><td>".$row['Mechanik']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Mech", "Mechanik", 'Mechanik');
 
 $sql = "SELECT * FROM Samochody";
 echo("<h3>Samochody</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Auto</th>");
-echo("<th>Pojazd</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Auto']."</td><td>".$row['Pojazd']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Auto", "Pojazd", 'Pojazd');
 
 $sql = 'SELECT * FROM Mechanik, Samochody, ABoth where IDM = ID_Mech and IDS = ID_Auto Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>IDM</th>");
-echo("<th>Mechanik</th>");
-echo("<th>IDS</th>");
-echo("<th>Pojazd</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID']."</td><td>".$row['IDM']."</td><td>".$row['Mechanik']."</td><td>".$row['IDS']."</td><td>".$row['Pojazd']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "Mechanik", "Pojazd", 'Pojazd');
 
 ?>
 

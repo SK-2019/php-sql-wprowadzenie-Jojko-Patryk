@@ -23,55 +23,45 @@
 ini_set('display_errors', '1');
           ini_set('display_startup_errors', '1');
           error_reporting(E_ALL);
-          
+
 require('../connect/connect3.php');
+
+function table($sql, $conn, $id_x, $nazwa, $data ){
+
+
+
+
+    $result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>$id_x</th>");
+    echo("<th>$nazwa</th>");
+    
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    }
+
+
+
 $sql = "SELECT * FROM Producent";
 echo("<h3>Producent</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Prod</th>");
-echo("<th>Producent</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Prod']."</td><td>".$row['Producent']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Prod", "Producent", 'Producent');
 
 $sql = "SELECT * FROM Przedmiot";
 echo("<h3>Item</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Item</th>");
-echo("<th>Przedmiot</th>");
+table($sql, $conn, "ID_Item", "Przedmiot", 'Przedmiot');
 
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Item']."</td><td>".$row['Przedmiot']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
 
 $sql = 'SELECT * FROM Producent, Przedmiot, CBoth where IDP = ID_Prod and IDI = ID_Item Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>ID.P</th>");
-echo("<th>Producent</th>");
-echo("<th>ID.I</th>");
-echo("<th>Przedmiot</th>");
+table($sql, $conn, "Producent", "Przedmiot", 'Przedmiot');
 
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID']."</td><td>".$row['IDP']."</td><td>".$row['Producent']."</td><td>".$row['IDI']."</td><td>".$row['Przedmiot']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
 
 ?>
 

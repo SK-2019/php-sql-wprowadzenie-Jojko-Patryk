@@ -24,55 +24,41 @@ ini_set('display_errors', '1');
           ini_set('display_startup_errors', '1');
           error_reporting(E_ALL);
 
-          
+
 require('../connect/connect3.php');
+
+function table($sql, $conn, $id_x, $nazwa, $data ){
+
+
+
+
+    $result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>$id_x</th>");
+    echo("<th>$nazwa</th>");
+    
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    }
+
 $sql = "SELECT * FROM Klasa";
 echo("<h3>Klasy</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Klasa</th>");
-echo("<th>Klasa</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Klasa']."</td><td>".$row['Klasa']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Klasa", "Klasa", 'Klasa');
 
 $sql = "SELECT * FROM Nauczyciel";
 echo("<h3>Nauczyciele</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>ID_Nau</th>");
-echo("<th>Nauczyciel</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID_Nau']."</td><td>".$row['Nauczyciel']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "ID_Nau", "Nauczyciel", 'Nauczyciel');
 
 $sql = 'SELECT * FROM Nauczyciel, Klasa, BBoth where IDN = ID_Nau and IDK = ID_Klasa Order by id asc';
 echo("<h3>Klasy i Nauczyciele</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>ID.K</th>");
-echo("<th>Klasa</th>");
-echo("<th>ID.N</th>");
-echo("<th>Nauczyciel</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['ID']."</td><td>".$row['IDK']."</td><td>".$row['Klasa']."</td><td>".$row['IDN']."</td><td>".$row['Nauczyciel']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+table($sql, $conn, "Nauczyciel", "Klasa", 'Klasa');
 
 ?>
 
