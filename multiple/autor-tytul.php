@@ -37,7 +37,7 @@ echo("<th>$nazwa</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
-    echo("<td>".$row['id_autor']."</td><td>".$row['nazwisko']."</td>");
+    echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
     echo("</tr>");
 }
 echo("</table>");
