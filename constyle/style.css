@@ -102,6 +102,10 @@ body {
   border-color: black;
   border-width: 5px;
 }
+.nav_icons2 {
+  height: 80px;
+  width: 80px;
+}
 
 .ars {
   display: block;
