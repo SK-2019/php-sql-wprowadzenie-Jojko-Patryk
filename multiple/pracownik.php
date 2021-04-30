@@ -19,6 +19,12 @@
       </div>
       <div class="item colorGreen">
 <?
+
+ini_set('display_errors', '1');
+          ini_set('display_startup_errors', '1');
+          error_reporting(E_ALL);
+
+          
 require('../connect/connect3.php');
 $sql = "SELECT * FROM Pracownik";
 echo("<h3>Pracownicy</h3>");

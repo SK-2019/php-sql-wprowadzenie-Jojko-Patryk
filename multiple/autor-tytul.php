@@ -19,14 +19,21 @@
       </div>
       <div class="item colorGreen">
 <?
+
+ini_set('display_errors', '1');
+          ini_set('display_startup_errors', '1');
+          error_reporting(E_ALL);
 require('../connect/connect3.php');
-$sql = "SELECT * FROM autor";
-echo("<h3>Autorzy</h3>");
-echo("<li>".$sql);
+
+function table($sql, $conn, $id_x, $nazwa, $data ){
+
+
+
+
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<th>id_autor</th>");
-echo("<th>nazwisko</th>");
+echo("<th>$id_x/th>");
+echo("<th>$nazwa</th>");
 
 while($row=$result->fetch_assoc()){
     echo("<tr>");
@@ -34,39 +41,14 @@ while($row=$result->fetch_assoc()){
     echo("</tr>");
 }
 echo("</table>");
-
-$sql = "SELECT * FROM tytul";
-echo("<h3>Tytuły</h3>");
-echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id_tytul</th>");
-echo("<th>tytul</th>");
-
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['id_tytul']."</td><td>".$row['tytul']."</td>");
-    echo("</tr>");
 }
-echo("</table>");
 
-$sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id asc';
-echo("<h3>Autorzy i Tytuły</h3>");
-echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>autor_id</th>");
-echo("<th>autor</th>");
-echo("<th>tytul_id</th>");
-echo("<th>tytul</th>");
+$sql = "SELECT * FROM autor";
+echo("<h2>Autorzy</h2>");
+echo("<li>".$sql."</li>");
+table($sql, $conn, "id_autor", "nazwisko", 'nazwisko');
 
-while($row=$result->fetch_assoc()){
-    echo("<tr>");
-    echo("<td>".$row['id']."</td><td>".$row['autor_id']."</td><td>".$row['nazwisko']."</td><td>".$row['tytul_id']."</td><td>".$row['tytul']."</td>");
-    echo("</tr>");
-}
-echo("</table>");
+
 
 ?>
 
