@@ -27,7 +27,7 @@ ini_set('display_errors', '1');
           
 require('../connect/connect3.php');
 
-function table($sql, $conn, $id_x, $nazwa, $data ){
+function table($sql, $conn, $id_x, $nazwa, $data, $tablen ){
 
 
 
@@ -36,10 +36,49 @@ function table($sql, $conn, $id_x, $nazwa, $data ){
     echo("<table border=1>");
     echo("<th>$id_x</th>");
     echo("<th>$nazwa</th>");
+
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
+
+        <form action='delete.php' method='POST'>
+        <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
+        <input type='text' name='tabela' value='".$tablen."' hidden>
+        <input type='text' name='kolumna' value='".$id_x."' hidden>
+        <input type='submit' value='Usuń'>
+        </form>
+
+        </td>");
+
+        echo("</tr>");
+    }
+    echo("</table>");
+    }
+
+function table2($sql, $conn, $id_x, $nazwa, $nazwa2, $data, $data2, $tablen ){
+
+
+
+
+    $result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>$id_x</th>");
+    echo("<th>$nazwa</th>");
+    echo("<th>$nazwa2</th>");
     
     while($row=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>".$row[$data2]."</td><td>
+
+        <form action='delete.php' method='POST'>
+        <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
+        <input type='text' name='tabela' value='".$tablen."' hidden>
+        <input type='text' name='kolumna' value='".$id_x."' hidden>
+        <input type='submit' value='Usuń'>
+        </form>
+
+        </td>");
+
         echo("</tr>");
     }
     echo("</table>");
@@ -59,7 +98,7 @@ table($sql, $conn, "ID_Dza", "Dzial", 'Dzial');
 $sql = 'SELECT * FROM Pracownik, Dzialy, EBoth where IDPS = ID_Pra and IDDZ = ID_Dza Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "Pracownik", "Dzial", "Dzial");
+table2($sql, $conn, "ID", "Pracownik", "Dzial", 'Pracownik', 'Dzial', "EBoth");
 
 ?>
 
