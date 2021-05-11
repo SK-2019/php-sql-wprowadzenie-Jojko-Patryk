@@ -43,7 +43,7 @@
         $conn->close();
         }
 
-        delete($conn, $_POST['table'], $_POST['column'], $_POST['row']);
+        delete($conn, $_POST['tabela'], $_POST['kolumna'], $_POST['wiersz']);
 
         ?>
       </div>
