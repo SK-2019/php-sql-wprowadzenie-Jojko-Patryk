@@ -20,12 +20,12 @@ h1 {
     height: 500px;
     background-position: center;
     background-size: cover;
-    transition: 0.51s;
+    transition: 0.80s;
   }
   
   .img:hover {
-    transform: scale(0.98);
-    filter: saturate(2.2) brightness(1.4);
+    transform: scale(0.95);
+    filter: saturate(2.0) brightness(1.2);
   }
   
   .foto01 {
