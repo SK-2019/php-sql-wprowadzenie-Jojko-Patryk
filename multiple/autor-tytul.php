@@ -95,7 +95,7 @@ table($sql, $conn, "id_tytul", "tytul", 'tytul', "tytul");
 $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id asc';
 echo("Autorzy i Tytuly");
 echo("<li>".$sql."</li>");
-table2($sql, $conn, "ID", "nazwisko", "tytul", 'nazwisko', 'tytul', 'autor-tytul');
+table2($sql, $conn, "id", "nazwisko", "tytul", 'nazwisko', 'tytul', 'autor-tytul');
 
 ?>
 
