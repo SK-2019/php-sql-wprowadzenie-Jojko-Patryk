@@ -38,7 +38,17 @@ function table($sql, $conn, $id_x, $nazwa, $data ){
     
     while($row=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td>");
+        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
+
+        <form action='delete.php' method='POST'>
+        <input type='number' name='row' value='".$row[$id_x]."' hidden>
+        <input type='text' name='table' value='".$table."' hidden>
+        <input type='text' name='column' value='".$id_x."' hidden>
+        <input type='submit' value='Usuń'>
+        </form>
+
+        </td>");
+
         echo("</tr>");
     }
     echo("</table>");
