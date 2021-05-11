@@ -26,7 +26,7 @@ ini_set('display_errors', '1');
 
 require('../connect/connect3.php');
 
-function table($sql, $conn, $id_x, $nazwa, $data ){
+function table($sql, $conn, $id_x, $nazwa, $data, $tablen ){
 
 
 
@@ -41,9 +41,9 @@ function table($sql, $conn, $id_x, $nazwa, $data ){
         echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
 
         <form action='delete.php' method='POST'>
-        <input type='number' name='row' value='".$row[$id_x]."' hidden>
-        <input type='text' name='table' value='".$table."' hidden>
-        <input type='text' name='column' value='".$id_x."' hidden>
+        <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
+        <input type='text' name='tabela' value='".$tablen."' hidden>
+        <input type='text' name='kolumna' value='".$id_x."' hidden>
         <input type='submit' value='Usuń'>
         </form>
 
@@ -59,18 +59,18 @@ function table($sql, $conn, $id_x, $nazwa, $data ){
 $sql = "SELECT * FROM Producent";
 echo("<h3>Producent</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "ID_Prod", "Producent", 'Producent');
+table($sql, $conn, "ID_Prod", "Producent", 'Producent', 'Producent');
 
 $sql = "SELECT * FROM Przedmiot";
 echo("<h3>Item</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "ID_Item", "Przedmiot", 'Przedmiot');
+table($sql, $conn, "ID_Item", "Przedmiot", 'Przedmiot', 'Przedmiot');
 
 
 $sql = 'SELECT * FROM Producent, Przedmiot, CBoth where IDP = ID_Prod and IDI = ID_Item Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "Producent", "Przedmiot", 'Przedmiot');
+table($sql, $conn, "Producent", "Przedmiot", 'Przedmiot', 'Cboth');
 
 
 ?>
