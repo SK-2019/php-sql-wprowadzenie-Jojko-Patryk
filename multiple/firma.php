@@ -26,33 +26,62 @@ ini_set('display_errors', '1');
 
 require('../connect/connect3.php');
 
-function table($sql, $conn, $id_x, $nazwa, $data, $tablen ){
+    function table($sql, $conn, $id_x, $nazwa, $data, $tablen ){
 
 
 
 
-    $result = $conn->query($sql);
-    echo("<table border=1>");
-    echo("<th>$id_x</th>");
-    echo("<th>$nazwa</th>");
+        $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>$id_x</th>");
+        echo("<th>$nazwa</th>");
     
-    while($row=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
+        while($row=$result->fetch_assoc()){
+            echo("<tr>");
+            echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
 
-        <form action='delete.php' method='POST'>
-        <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
-        <input type='text' name='tabela' value='".$tablen."' hidden>
-        <input type='text' name='kolumna' value='".$id_x."' hidden>
-        <input type='submit' value='Usuń'>
-        </form>
+            <form action='delete.php' method='POST'>
+            <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
+            <input type='text' name='tabela' value='".$tablen."' hidden>
+            <input type='text' name='kolumna' value='".$id_x."' hidden>
+            <input type='submit' value='Usuń'>
+            </form>
 
-        </td>");
+            </td>");
 
-        echo("</tr>");
-    }
-    echo("</table>");
-    }
+            echo("</tr>");
+        }
+        echo("</table>");
+        }
+
+    function table2($sql, $conn, $id_x, $nazwa, $nazwa2, $data, $tablen ){
+
+
+
+
+        $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>$id_x</th>");
+        echo("<th>$nazwa</th>");
+        echo("<th>$nazwa2</th>");
+        
+        while($row=$result->fetch_assoc()){
+            echo("<tr>");
+            echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
+    
+            <form action='delete.php' method='POST'>
+            <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
+            <input type='text' name='tabela' value='".$tablen."' hidden>
+            <input type='text' name='kolumna' value='".$id_x."' hidden>
+            <input type='submit' value='Usuń'>
+            </form>
+    
+            </td>");
+    
+            echo("</tr>");
+        }
+        echo("</table>");
+        }    
 
 
 
@@ -70,7 +99,7 @@ table($sql, $conn, "ID_Item", "Przedmiot", 'Przedmiot', 'Przedmiot');
 $sql = 'SELECT * FROM Producent, Przedmiot, CBoth where IDP = ID_Prod and IDI = ID_Item Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "Producent", "Przedmiot", 'Przedmiot', 'Cboth');
+table2($sql, $conn, "ID", "Producent", "Przedmiot", 'Przedmiot', 'Cboth');
 
 
 ?>
