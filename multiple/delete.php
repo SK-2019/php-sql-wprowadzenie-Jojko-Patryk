@@ -25,7 +25,7 @@
 
 
 
-        require_once("../connect/connect.php");
+        require_once("../connect/connect3.php");
 
         function delete($conn, $table, $column, $row){
         
