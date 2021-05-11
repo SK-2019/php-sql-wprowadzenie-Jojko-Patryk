@@ -2,11 +2,11 @@ h1 {
     background-color: blue;
   }
   
-  .gallery {
+  .galeria {
     display: flex;
   }
   
-  .row {
+  .wiersz {
     background-color: purple;
   }
   
@@ -40,4 +40,10 @@ h1 {
     background-image: url("https://i.imgur.com/PT4zBmE.jpg");
   }
   
+  .foto_title {
+    background-color: white;
+    padding: 5px;
+    display: block;
+  }
+
   
