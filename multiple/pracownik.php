@@ -88,12 +88,12 @@ function table2($sql, $conn, $id_x, $nazwa, $nazwa2, $data, $data2, $tablen ){
 $sql = "SELECT * FROM Pracownik";
 echo("<h3>Pracownicy</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "ID_Pra", "Pracownik", 'Pracownik');
+table($sql, $conn, "ID_Pra", "Pracownik", 'Pracownik', "Parcownik");
 
 $sql = "SELECT * FROM Dzialy";
 echo("<h3>Działy</h3>");
 echo("<li>".$sql);
-table($sql, $conn, "ID_Dza", "Dzial", 'Dzial');
+table($sql, $conn, "ID_Dza", "Dzial", 'Dzial', "Dzialy");
 
 $sql = 'SELECT * FROM Pracownik, Dzialy, EBoth where IDPS = ID_Pra and IDDZ = ID_Dza Order by id asc';
 echo("<h3>Both</h3>");

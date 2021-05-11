@@ -85,12 +85,12 @@ function table2($sql, $conn, $id_x, $nazwa, $nazwa2, $data, $data2, $tablen ){
 $sql = "SELECT * FROM autor";
 echo("<h2>Autorzy</h2>");
 echo("<li>".$sql."</li>");
-table($sql, $conn, "id_autor", "nazwisko", 'nazwisko');
+table($sql, $conn, "id_autor", "nazwisko", 'nazwisko', "autor");
 
 $sql = "SELECT * FROM tytul";
 echo("<h2>Tytuły</h2>");
 echo("<li>".$sql."</li>");
-table($sql, $conn, "id_tytul", "tytul", 'tytul');
+table($sql, $conn, "id_tytul", "tytul", 'tytul', "tytul");
 
 $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul Order by id asc';
 echo("Autorzy i Tytuly");
