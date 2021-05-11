@@ -99,7 +99,7 @@ table($sql, $conn, "ID_Item", "Przedmiot", 'Przedmiot', 'Przedmiot');
 $sql = 'SELECT * FROM Producent, Przedmiot, CBoth where IDP = ID_Prod and IDI = ID_Item Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-table2($sql, $conn, "ID", "Producent", "Przedmiot", 'Producent', 'Przedmiot', 'Cboth');
+table2($sql, $conn, "ID", "Producent", "Przedmiot", 'Producent', 'Przedmiot', 'CBoth');
 
 
 ?>
