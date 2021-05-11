@@ -1,0 +1,43 @@
+h1 {
+    background-color: blue;
+  }
+  
+  .gallery {
+    display: flex;
+  }
+  
+  .row {
+    background-color: purple;
+  }
+  
+  .img {
+    margin: 5px;
+    padding: 0px;
+    width: 500px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.51s;
+  }
+  
+  .img:hover {
+    transform: scale(0.98);
+    filter: saturate(2.2) brightness(1.4);
+  }
+  
+  .foto01 {
+    background-image: url("https://i.imgur.com/zcjL84j.jpg");
+  }
+  .foto01:hover {
+    background-image: url("https://i.imgur.com/uwZj3ma.jpg");
+  }
+  
+  .foto02 {
+    background-image: url("https://i.imgur.com/DywzPtb.jpg");
+  }
+  
+  .foto03 {
+    background-image: url("https://i.imgur.com/PT4zBmE.jpg");
+  }
+  
+  
