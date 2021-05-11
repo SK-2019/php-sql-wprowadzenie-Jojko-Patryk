@@ -54,7 +54,7 @@ require('../connect/connect3.php');
         echo("</table>");
         }
 
-    function table2($sql, $conn, $id_x, $nazwa, $nazwa2, $data, $tablen ){
+    function table2($sql, $conn, $id_x, $nazwa, $nazwa2, $data, $data2, $tablen ){
 
 
 
@@ -67,7 +67,7 @@ require('../connect/connect3.php');
         
         while($row=$result->fetch_assoc()){
             echo("<tr>");
-            echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>
+            echo("<td>".$row[$id_x]."</td><td>".$row[$data]."</td><td>".$row[$data2]."</td><td>
     
             <form action='delete.php' method='POST'>
             <input type='number' name='wiersz' value='".$row[$id_x]."' hidden>
@@ -99,7 +99,7 @@ table($sql, $conn, "ID_Item", "Przedmiot", 'Przedmiot', 'Przedmiot');
 $sql = 'SELECT * FROM Producent, Przedmiot, CBoth where IDP = ID_Prod and IDI = ID_Item Order by id asc';
 echo("<h3>Both</h3>");
 echo("<li>".$sql);
-table2($sql, $conn, "ID", "Producent", "Przedmiot", 'Przedmiot', 'Cboth');
+table2($sql, $conn, "ID", "Producent", "Przedmiot", 'Producent', 'Przedmiot', 'Cboth');
 
 
 ?>
